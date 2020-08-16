@@ -22,6 +22,11 @@ body {
 .cta__btn {
     border-radius: 20px;
     background: $secondarybg;
+    color: #fff;
+    padding: .2em;
+    font-size: 0.8em;
+    outline: none;
+    border: none;
 }
 
 
@@ -42,15 +47,31 @@ body {
 .header__navbar {
     position: absolute;
     height: 100vh;
-    width: 18em;
+    width: 100%;
     right: 0;
     background: #03243C;
     opacity: 0.92;
     color: #fff;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition-property: display, height, width;
+    margin: 32.6em 0 0 0;
+    z-index: 1;
+    animation: slide 0.5s linear;
 }
+
+
+.header__navbar_hide {
+    display: none;
+    transition-property: display, height, width;
+}
+
+body.header__navbar {
+    position: fixed;
+    overflow: hidden;
+}
+
 
 .header__menu {
     padding: 0 2em;
@@ -59,6 +80,14 @@ body {
 .header__menuitem {
     margin: 0 0 3em 0;
     cursor: pointer;
+}
+
+.header__close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    margin: 0 0 0 0.5em;
 }
 
 /*--------LANDING-----------------*/
@@ -87,9 +116,6 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
-    background: url('/illustrations/dottedbg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 1.5em;
     height: max-content;
     justify-content: space-around;
@@ -98,12 +124,7 @@ body {
     button {
         grid-column: 2 / 5;
         grid-row: 8 / 5;
-        color: #fff;
         width: 90%;
-        padding: .2em;
-        font-size: 0.8em;
-        outline: none;
-        border: none;
     }
 }
 
@@ -118,7 +139,7 @@ body {
     grid-row: 5 / 8;
 
     img {
-        width: 15em;
+        width: 100%;
         opacity: 0.7;
     }
 }
@@ -144,8 +165,8 @@ body {
         font-size: 1.1em;
         font-weight: bold;
         grid-column: 1 / -1;
-        grid-row: 1 / 3;
-        margin: 1em auto 0.3em;
+        grid-row: 1 / 5;
+        margin: 1em 1em 0.3em;
         text-align: center;
     }
 
@@ -153,30 +174,165 @@ body {
         color: #fff;
         font-size: 0.8em;
         background-color: transparent;
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        margin: 0 0 0 4em;
+        grid-column: 2 / -1;
+        grid-row: 4 / 4;
+        margin: 1em 0 0 4em;
     }
 }
 
 .about__overlay {
-    background: url('/illustrations/balloon.png');
-    background-size: 95%;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     grid-column: 1 / -1;
-    grid-row: 2 / 7;
+    grid-row: 4 / 8;
+
+    img {
+        width: 100%;
+    }
 }
 
 .about__text {
-    padding: 2em;
-    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        padding: 1.6em;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    button {
+        width: 30%;
+    }
+}
+
+.about__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    margin: 1em 0 0 0;
+    padding: 1em;
+
+}
+
+.about__circle {
+    width: 120px;
+    height: 120px;
+    background: $primarybg;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin: 0 0 1em 0;
+
+    img {
+        width: 50%;
+    }
+
+    p {
+        font-size: 0.65em;
+        font-weight: bold;
+        word-wrap: break-word;
+        padding: 0 1em;
+        display: flex;
+        text-align: center;
+    }
+}
+
+.about__circle1 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+.about__circle2 {
+    grid-column: 4 / -1;
+    grid-row: 1 / 4;
+}
+
+.about__circle3 {
+    grid-column: 1 / 4;
+    grid-row: 5 / 8;
+}
+
+.about__circle4 {
+    grid-column: 4 / -1;
+    grid-row: 5 / 8;
+}
+
+.about__circle5 {
+    grid-column: 1 / 4;
+    grid-row: 9 / 12;
+}
+
+.about__circle6 {
+    grid-column: 4 / -1;
+    grid-row: 9 / 12;
+}
+
+.about__circle7 {
+    grid-column: 1 / -1;
+    grid-row: 13 / 16;
 }
 
 
 /*--------APPROACH-----------------*/
 
+.approach {
+    display: flex;
+    flex-direction: column;
+}
+
+.approach__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.approach__about {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    p {
+        margin: 0 0 1em 0;
+    }
+}
+
+.approach__banner {
+    background: $primarybg;
+    padding: 1em;
+}
+
+.approach__seasons {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        padding: 2em;
+    }
+}
+
+.approach__season1 {
+    height: 50vh;
+    background: $primarybg;
+
+    img {
+        width: 100%;
+    }
+}
+
+.approach__upcoming{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button{
+        width: 50%;
+    }
+}
 /*--------NETWORK SCIENCE-----------------*/
 
 /*--------FOOTER-----------------*/
@@ -196,3 +352,22 @@ body {
 }
 
 /*--------BACKGROUNDS--------*/
+
+.pagebg {
+    background: url('/illustrations/dottedbg.png');
+    background-repeat: no-repeat;
+}
+
+/*--------ANIMATIONS--------*/
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0.92;
+    }
+}

@@ -18,7 +18,8 @@
             <line x1="0" y1="37.5" x2="66" y2="37.5" stroke="black" stroke-width="6" />
         </svg>
 
-        <nav class="header__navbar">
+        <nav class="header__navbar header__navbar_hide">
+            <div class="header__close">&times;</div>
             <ul class="header__menu">
                 <li class="header__menuitem">About</li>
                 <li class="header__menuitem">Our Approach</li>
@@ -38,7 +39,7 @@
                 </svg>
             </div>
         </section>
-        <section class="intro">
+        <section class="intro pagebg">
             <p class="intro__text">NetworkED is an open education initiative that develops a robust evidence-based toolbox which equips children to embrace
                 real-world complexity and a network-oriented worldview through fun experiences and a global community of practice.</p>
 
@@ -56,50 +57,52 @@
                 <span>-Curtis Ogden</span>
                 <!-- <span>Senior Associate Institute for Social Change</span> -->
                 <div class="about__overlay">
+                    <img src="/illustrations/balloon.png" alt="People holding balloons">
                 </div>
             </div>
-            <div class="about__text">
+            <div class="about__text pagebg">
                 <p>We’re a community of passionate researchers, educators and industry mentors with a common interest to introduce networks
                 to kids across different countries. The goal of the community is to create a thriving ecosystem for the torchbearers of
                 network thinking, who share best practices on methods, tools and pains of demystifying complexity for kids.</p>
-                <button>Join Us</button>
+                <button class="cta__btn">Join Us</button>
             </div>
-            <div class="about__items">
-                <div class="circle1">
+            <div class="about__items pagebg">
+                <div class="about__circle about__circle1">
                     <img src="/illustrations/inf1.png" alt="">
                     <p>Domain Expertise</p>
                 </div>
-                <div class="circle2">
+                <div class="about__circle about__circle2">
                     <img src="/illustrations/inf2.png" alt="">
                     <p>Personal learning networks</p>
                 </div>
-                <div class="circle3">
+                <div class="about__circle about__circle3">
                     <img src="/illustrations/inf3.png" alt="">
                     <p>Professional development in network thinking</p>
                 </div>
-                <div class="circle4">
+                <div class="about__circle about__circle4">
                     <img src="/illustrations/inf4.png" alt="">
                     <p>Shared resources</p>
                 </div>
-                <div class="circle5">
+                <div class="about__circle about__circle5">
                     <img src="/illustrations/inf5.png" alt="">
                     <p>Celebrate small win</p>
                 </div>
-                <div class="circle6">
+                <div class="about__circle about__circle6">
                     <img src="/illustrations/inf6.png" alt="">
                     <p>Latest Events</p>
                 </div>
-                <div class="circle7">
+                <div class="about__circle about__circle7">
                     <img src="/illustrations/inf7.png" alt="">
                     <p>Actionable Solutions</p>
                 </div>
             </div>
         </section>
-        <section class="approach">
+        <section class="approach pagebg">
             <div class="approach__details">
                 <div class="approach__about">
                     <p>Every year, NetworkED hosts a short term fellowship program which orients and equips children with tools to explore
-                    networks in the real world through different pathways. The fellowship is rigorous, immersive and challenging, as
+                    networks in the real world through different pathways.</p>
+                    <p>The fellowship is rigorous, immersive and challenging, as
                     children investigate biological, physical and social networks through a range of digital and physical experiences. And
                     of course, we love to goof around as much as we can!</p>
                     <p>The design of the fellowship is done well in advance in collaboration with domain experts, researchers and educators to
@@ -120,14 +123,14 @@
                     for updates on the Social Sleuths!
                 </p>
                 <div class="approach__season1">
-
+                    <img src="/illustrations/Group 171.png" alt="">
                 </div>
             </div>
             <div class="approach__upcoming">
                 <p>
                     Upcoming Seasons Epidemic Intelligence Service Bio Investigators Operation Fake News
                 </p>
-                <button>join us</button>
+                <button class="cta__btn">join us</button>
             </div>
         </section>
         <section class="netscience">
@@ -192,6 +195,6 @@
             <p>&copy; NetworkEd, All rights reserved</p>
         </footer>
     </main>
-    
+    <script src="core.js"></script>
 </body>
 </html>
