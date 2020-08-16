@@ -59,7 +59,7 @@ body {
 
 /*--------LANDING-----------------*/
 .landing {
-  height: 30vh;
+  height: 27vh;
   background: #FFDE70;
   display: flex;
   flex-direction: column;
@@ -67,25 +67,31 @@ body {
   align-items: center;
   padding: 0 2em;
   margin: 3em 0 0 0;
+  font-style: italic;
 }
 
 .landing__valueprop {
   margin: 0 0 1em 0;
-  font-weight: 500;
-  font-size: 1em;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 /*--------INTRO-----------------*/
 .intro {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   background: url("/illustrations/dottedbg.png");
-  padding: 1.8em 3em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1.5em;
+  height: max-content;
+  justify-content: space-around;
+  align-items: center;
 }
 .intro button {
-  grid-column: 4/-1;
-  grid-row: 5/6;
+  grid-column: 2/5;
+  grid-row: 8/5;
   color: #fff;
   width: 90%;
   padding: 0.2em;
@@ -96,12 +102,13 @@ body {
 
 .intro__text {
   grid-column: 1/-1;
-  grid-row: 1/4;
+  grid-row: 2/6;
+  font-size: 0.9em;
 }
 
 .intro__image {
-  grid-column: 1/-1;
-  grid-row: 2/6;
+  grid-column: 2/-1;
+  grid-row: 5/8;
 }
 .intro__image img {
   width: 15em;
@@ -109,6 +116,53 @@ body {
 }
 
 /*--------ABOUT-----------------*/
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__hero {
+  background: #03243C;
+  height: 40vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  justify-content: center;
+}
+.about__hero blockquote {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  grid-column: 1/-1;
+  grid-row: 1/3;
+  margin: 1em auto 0.3em;
+  text-align: center;
+}
+.about__hero span {
+  color: #fff;
+  font-size: 0.8em;
+  background-color: transparent;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  margin: 0 0 0 4em;
+}
+
+.about__overlay {
+  background: url("/illustrations/balloon.png");
+  background-size: 95%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 2/7;
+}
+
+.about__text {
+  padding: 2em;
+  font-size: 0.9em;
+}
+
 /*--------APPROACH-----------------*/
 /*--------NETWORK SCIENCE-----------------*/
 /*--------FOOTER-----------------*/
