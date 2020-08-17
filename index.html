@@ -10,14 +10,17 @@
 <body>
     <header id="titlebar" class="header">
         <svg width="100%" height="50" fill="#000000" class="header__logo">
-            <image href="/illustrations/neted_logo.png" x="0" y="-45" width="150"></image>
+            <image href="/illustrations/neted_logo.png" x="65" y="-45" width="150"></image>
         </svg>
-        <svg width="26" height="26" viewBox="0 0 67 26" fill="none" class="header__hamburger">
+        <!-- <svg width="26" height="26" viewBox="0 0 67 26" fill="none" class="header__hamburger">
             <line x1="0" y1="3.5" x2="66" y2="3.5" stroke="black" stroke-width="6" />
             <line x1="0" y1="20.5" x2="66" y2="20.5" stroke="black" stroke-width="6" />
             <line x1="0" y1="37.5" x2="66" y2="37.5" stroke="black" stroke-width="6" />
-        </svg>
-
+        </svg> -->
+        <div class="header__hamburger">
+            <i class="fas fa-chevron-up"></i>
+            <span>Menu</span>
+        </div>
         <nav class="header__navbar header__navbar_hide">
             <div class="header__close">&times;</div>
             <ul class="header__menu">
@@ -135,62 +138,71 @@
         </section>
         <section class="netscience">
             <div class="netscience__text">
-                <p>Network Science is the study of patterns of connections in the real world. It is an emerging science which provides a
+                <h4>Network Science is the study of patterns of connections in the real world</h4>
+                <p>It is an emerging science which provides a
                 wiring diagram of any complex real world system be it society, spread of diseases or even the wiring of the brain. It
                 unpacks the similarities, differences, relationships and connectivity amongst all parts within the networks revealing
-                the mechanistic nature of the world we live in. Through networks, we understand the behaviour of real world dynamics of
+                the mechanistic nature of the world we live in.</p> 
+                <p>Through networks, we understand the behaviour of real world dynamics of
                 complex systems, enabling us to better identify, manage, predict the problems worth solving for social change.</p>
             </div>
             <div class="netscience__apps">
                 <h3>Applications</h3>
-                <div class="netscience__circle">
+                <div class="netscience__circle netscience__circle1">
                     <img src="/illustrations/inf4apps6 1.png" alt="">
-                    <h4>Epidemiology</h4>
+                    <h5>Epidemiology</h5>
                     <p>(Spread of diseases) Spread of foot and mouth disease at the UK in 2001
                     over 75 days</p>
                 </div>
-                <div class="netscience__circle">
+                <div class="netscience__circle netscience__circle2">
                     <img src="/illustrations/inf4apps5 1.png" alt="">
-                    <h4>Ecosystems in Nature</h4>
+                    <h5>Ecosystems in Nature</h5>
                     <p>fish swimming in schools, ant colonies, birds flying in formation, crickets chirping in unison, giant honeybees
                     shimmering</p>
                 </div>
-                <div class="netscience__circle">
+                <div class="netscience__circle netscience__circle3">
                     <img src="/illustrations/inf4apps4.png" alt="">
-                    <h4>Biology</h4>
+                    <h5>Biology</h5>
                     <p>cell formation, nervous system, neural networks</p>
                 </div>
-                <div class="netscience__circle">
+                <div class="netscience__circle netscience__circle4">
                     <img src="/illustrations/inf4apps3.png" alt="">
-                    <h4>Physics</h4>
+                    <h5>Physics</h5>
                     <p>particle interactions, structure of the universe</p>
                 </div>
-                <div class="netscience__circle">
+                <div class="netscience__circle netscience__circle5">
                     <img src="/illustrations/inf4 apps 2.png" alt="">
-                    <h4>Engineering</h4>
+                    <h5>Engineering</h5>
                     <p>creation of robust infrastructure (eg. electricity, telecom), rust formation (natural growth processes similar to
                     diffusion limited aggregation)</p>
                 </div>
-                <div class="netscience__circle">
+                <div class="netscience__circle netscience__circle6">
                     <img src="/illustrations/inf4 apps.png" alt="">
-                    <h4>Social</h4>
+                    <h5>Social</h5>
                     <p>interactions between people (eg. Facebook, group behaviour)</p>
                 </div>
+                <button class="cta__btn">Join Us!</button>
             </div>
         </section>
         <footer class="footer">
             <div class="footer__contact">
                 <h3>Contact Us</h3>
-                <img src="/illustrations/noun_call_2442970 1.png" alt="Contact Me through phone">
-                <img src="/illustrations/noun_Email_1569998 1.png" alt="Email me">
+                <div>
+                    <span><i class="fas fa-phone-alt"></i></span>
+                    <span><i class="fas fa-envelope"></i></span>
+                </div>
+                
             </div>
             <div class="footer__social">
                 <h3>Follow Me</h3>
-                <img src="/illustrations/twitter.png" alt="">
-                <img src="/illustrations/youtube.png" alt="">
-                <img src="/illustrations/facebook.png" alt="">
-                <img src="/illustrations/instagram.png" alt="">
-                <img src="/illustrations/linkedin.png" alt="">
+                <div>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-youtube"></i></span>
+                    <span><i class="fab fa-facebook"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+                </div>
+                
             </div>
             <p>&copy; NetworkEd, All rights reserved</p>
         </footer>
