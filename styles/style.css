@@ -61,6 +61,22 @@ p {
   font-size: 1.5em;
 }
 
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.header__logo img {
+  display: inline-block;
+  position: absolute;
+  width: 70%;
+  transform: translateY(-15%);
+}
+
 .header__navbar {
   position: absolute;
   height: 100vh;
