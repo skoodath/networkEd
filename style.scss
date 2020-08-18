@@ -46,6 +46,7 @@ p {
     align-items: center;
     background: #fff;
     z-index: 1;
+    box-shadow: 0 -2px 15px #ddd;
 }
 
 .header__hamburger {
@@ -63,6 +64,10 @@ p {
 
     i {
         font-size: 1.5em;
+    }
+
+    span {
+        font-size: 0.9em;
     }
 }
 
@@ -84,9 +89,10 @@ p {
 }
 
 .header__navbar {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
     background: #03243C;
     opacity: 0.92;
@@ -95,9 +101,10 @@ p {
     flex-direction: column;
     justify-content: space-around;
     transition-property: display, height, width;
-    margin: 32.6em 0 0 0;
+    transform-origin: bottom;
+    margin: 0;
     z-index: 1;
-    animation: slide 0.5s linear;
+    animation: slide 0.5s ease-out;
 }
 
 
@@ -106,18 +113,13 @@ p {
     transition-property: display, height, width;
 }
 
-body.header__navbar {
-    position: fixed;
-    overflow: hidden;
-}
-
-
 .header__menu {
     padding: 0 2em;
     text-align: center;
 }
 
 .header__menuitem {
+    position: relative;
     margin: 0 0 3em 0;
     cursor: pointer;
 }
@@ -135,21 +137,31 @@ body.header__navbar {
 /*--------LANDING-----------------*/
 
 .landing {
-    height: 27vh;
+    height: 13em;
     background: $primarybg;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0 2em;
     margin: 3em 0 0 0;
-    font-style: italic;
 }
 
 .landing__valueprop {
     margin: 0 0 1em 0;
-    font-weight: 700;
-    font-size: 1.1em;
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.landing__cta {
+    display: flex;
+    flex-direction: column;
+
+    svg {
+        justify-self: flex-end;
+    }
 }
 
 /*--------INTRO-----------------*/
@@ -173,7 +185,7 @@ body.header__navbar {
 .intro__text {
     grid-column: 1 / -1;
     grid-row: 2 / 6;
-
+    padding: 1em 2em;
 }
 
 .intro__image {
@@ -258,8 +270,8 @@ body.header__navbar {
 }
 
 .about__circle {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     background: $primarybg;
     border-radius: 50%;
     display: flex;
@@ -281,6 +293,13 @@ body.header__navbar {
         display: flex;
         text-align: center;
     }
+}
+
+.subheaders {
+    font-weight: 300;
+    text-transform: uppercase;
+    align-self: center;
+    margin: 1em 0;
 }
 
 .about__circle1 {
@@ -344,6 +363,10 @@ body.header__navbar {
 .approach__banner {
     background: $primarybg;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 2px;
 }
 
 .approach__seasons {
@@ -557,12 +580,24 @@ body.header__navbar {
 
 @keyframes slide {
     0% {
-        transform: translateY(100%);
+        transform: scale(0);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(0);
-        opacity: 0.92;
+        transform: scale(1.0);
+        opacity: 0.95;
+    }
+}
+
+@keyframes unslide {
+    0% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
     }
 }
