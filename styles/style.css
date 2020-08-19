@@ -132,18 +132,37 @@ p {
   background: #FFDE70;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 0 2em;
   margin: 3em 0 0 0;
+  position: relative;
+}
+
+.landing__bg {
+  position: absolute;
 }
 
 .landing__valueprop {
   margin: 0 0 1em 0;
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 0.8em;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.landing__valueprop_span1 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.landing__valueprop_span2 {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.landing__valueprop_span3 {
+  font-size: 1.6em;
+  font-weight: 700;
 }
 
 .landing__cta {
@@ -268,7 +287,7 @@ p {
   font-size: 0.6em;
   font-weight: bold;
   word-wrap: break-word;
-  padding: 0 1em;
+  padding: 0 2em;
   display: flex;
   text-align: center;
 }
@@ -430,7 +449,7 @@ p {
 }
 .netscience__circle p {
   word-wrap: break-word;
-  padding: 1em;
+  padding: 0 2em;
   justify-self: center;
   text-align: center;
   font-size: 0.6em;

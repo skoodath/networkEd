@@ -35,13 +35,14 @@
     </header>
     <main class="main">
         <section class="landing">
-            <p class="landing__valueprop">Our mission is to help kids discover the hidden interconnectedness of the world using Network Science</p>
-            <div class="landing__cta">
-                <svg width="30" height="30" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="39.5" cy="39.5" r="39" stroke="#03243C" />
-                    <path d="M65.1675 41.4218L25.1497 62.0755L27.272 17.0922L65.1675 41.4218Z" fill="#03243C" />
-                </svg>
-            </div>
+            <div id="particles-js" class="landing__bg"></div>
+                <p class="landing__valueprop"><span class="landing__valueprop_span1">Our mission</span><br>is to help<br><span class="landing__valueprop_span2">kids discover</span><br>the hidden<br>interconnectedness<br>of the world using<br><span class="landing__valueprop_span3">Network Science</span></p>
+                <div class="landing__cta">
+                    <svg width="30" height="30" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="39.5" cy="39.5" r="39" stroke="#03243C" />
+                        <path d="M65.1675 41.4218L25.1497 62.0755L27.272 17.0922L65.1675 41.4218Z" fill="#03243C" />
+                    </svg>
+                </div>
         </section>
         <section class="intro pagebg">
             <p class="intro__text">NetworkED is an initiative that develops a robus <b>evidence based toolbox</b> to gain insights about <b>real-world complexity</b>
@@ -212,5 +213,10 @@
         </footer>
     </main>
     <script src="core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json');
+
+    </script>
 </body>
 </html>
