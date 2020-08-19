@@ -30,6 +30,27 @@ p {
   font-size: 0.8em;
 }
 
+.subheaders {
+  font-weight: 300;
+  text-transform: uppercase;
+  align-self: center;
+  margin: 4em 0 0 0;
+  position: relative;
+}
+.subheaders::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("/illustrations/underline.png");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
 /*--------HEADER-----------------*/
 .header {
   position: fixed;
@@ -55,7 +76,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 0.3em;
-  background: #FFDE70;
+  background: #fff;
   cursor: pointer;
 }
 .header__hamburger i {
@@ -83,14 +104,14 @@ p {
 
 .header__navbar {
   position: fixed;
-  top: 0;
+  top: 10%;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #03243C;
-  opacity: 0.92;
-  color: #fff;
+  background: #fff;
+  color: #272727;
   display: flex;
+  opacity: 0.95;
   flex-direction: column;
   justify-content: space-around;
   transition-property: display, height, width;
@@ -98,6 +119,7 @@ p {
   margin: 0;
   z-index: 1;
   animation: slide 0.5s ease-out;
+  box-shadow: 2px 0 5px #272727;
 }
 
 .header__navbar_hide {
@@ -213,9 +235,10 @@ p {
 
 .about__hero {
   background: #03243C;
-  height: 40vh;
+  height: 45vh;
   position: relative;
   display: grid;
+  padding: 3em 0 0 0;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, auto);
   justify-content: center;
@@ -261,6 +284,10 @@ p {
   width: 30%;
 }
 
+.about__us.subheaders {
+  margin: 1em 0 0 0;
+}
+
 .about__items {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -291,13 +318,6 @@ p {
   padding: 0 2em;
   display: flex;
   text-align: center;
-}
-
-.subheaders {
-  font-weight: 300;
-  text-transform: uppercase;
-  align-self: center;
-  margin: 1em 0;
 }
 
 .about__circle1 {
@@ -389,6 +409,19 @@ p {
 }
 .approach__upcoming button {
   width: 50%;
+}
+.approach__upcoming ul {
+  margin: 0 0 1em 0;
+}
+.approach__upcoming ul li {
+  font-size: 0.9em;
+  margin: 0 0 0.5em 0;
+}
+.approach__upcoming ul li i {
+  margin: 0 1em 0 0;
+}
+.approach__upcoming h3 {
+  font-weight: 600;
 }
 
 /*--------NETWORK SCIENCE-----------------*/
@@ -543,22 +576,12 @@ p {
 /*--------ANIMATIONS--------*/
 @keyframes slide {
   0% {
-    transform: scale(0);
+    transform: translateY(100%);
     opacity: 0;
   }
   100% {
-    transform: scale(1);
-    opacity: 0.95;
-  }
-}
-@keyframes unslide {
-  0% {
-    transform: scale(1);
-    opacity: 0.95;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
+    transform: translateY(0);
+    opacity: 0.75;
   }
 }
 

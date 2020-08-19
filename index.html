@@ -12,24 +12,20 @@
         <div class="header__logo">
             <img src="/illustrations/neted_logo.png" alt="">
         </div>
-        <!-- <svg width="26" height="26" viewBox="0 0 67 26" fill="none" class="header__hamburger">
-            <line x1="0" y1="3.5" x2="66" y2="3.5" stroke="black" stroke-width="6" />
-            <line x1="0" y1="20.5" x2="66" y2="20.5" stroke="black" stroke-width="6" />
-            <line x1="0" y1="37.5" x2="66" y2="37.5" stroke="black" stroke-width="6" />
-        </svg> -->
         <div class="header__hamburger">
             <i class="fas fa-chevron-up"></i>
             <span>Menu</span>
         </div>
         <!-- <div class="header__home">Home</div> -->
         <nav class="header__navbar header__navbar_hide">
-            <div class="header__close">&times;</div>
+            <div class="header__close">
+                <i class="fas fa-chevron-down"></i>
+            </div>
             <ul class="header__menu">
-                <li class="header__menuitem">About</li>
-                <li class="header__menuitem">Our Approach</li>
-                <li class="header__menuitem">What is network Science?</li>
-                <li class="header__menuitem">Blog</li>
-                <li class="header__menuitem">Join Us</li>
+                <li class="header__menuitem" data-value="about">About</li>
+                <li class="header__menuitem" data-value="approach">Our Approach</li>
+                <li class="header__menuitem" data-value="netscience">What is network Science?</li>
+                <li class="header__menuitem" data-value="blog">Blog</li>
             </ul>
         </nav>
     </header>
@@ -133,14 +129,17 @@
                     <img src="/illustrations/Group 171.png" alt="">
                 </div>
             </div>
-            <div class="approach__upcoming">
-                <p>
-                    Upcoming Seasons Epidemic Intelligence Service Bio Investigators Operation Fake News
-                </p>
+            <div class="approach__upcoming pagebg">
+                <h3>Upcoming Seasons</h3>
+                <ul>
+                    <li><i class="fas fa-lock"></i>Epidemic Intelligence Service</li>
+                    <li><i class="fas fa-lock"></i>Bio Investigators</li>
+                    <li><i class="fas fa-lock"></i>Operation Fake News</li>
+                </ul>
                 <button class="cta__btn">join us</button>
             </div>
         </section>
-        <section class="netscience">
+        <section class="netscience pagebg">
             <h3 class="subheaders">What is NETWORK SCIENCE?</h3>
             <div class="netscience__text">
                 <h4>Network Science is the study of patterns of connections in the real world</h4>
@@ -152,7 +151,7 @@
                 complex systems, enabling us to better identify, manage, predict the problems worth solving for social change.</p>
             </div>
             <div class="netscience__apps">
-                <h3>Applications</h3>
+                <h3>Application</h3>
                 <div class="netscience__circle netscience__circle1">
                     <img src="/illustrations/inf4apps6 1.png" alt="">
                     <h5>Epidemiology</h5>
