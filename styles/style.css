@@ -132,7 +132,7 @@ p {
   background: #FFDE70;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin: 3em 0 0 0;
   position: relative;
@@ -140,6 +140,7 @@ p {
 
 .landing__bg {
   position: absolute;
+  width: 100%;
 }
 
 .landing__valueprop {
