@@ -12,6 +12,7 @@
     text-decoration: none;
     font-size: 100%;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +28,8 @@ body {
     font-size: 0.8em;
     outline: none;
     border: none;
+    width: 110px;
+    height: 28px;
 }
 
 p {
@@ -39,6 +42,7 @@ p {
     align-self: center;
     margin: 4em 0 0 0;
     position: relative;
+
     &::after {
         content: '';
         position: absolute;
@@ -65,7 +69,7 @@ p {
     justify-content: center;
     align-items: center;
     background: #fff;
-    z-index: 1;
+    z-index: 99;
     box-shadow: 0 -2px 15px #ddd;
 }
 
@@ -103,7 +107,8 @@ p {
     img {
         display: inline-block;
         position: absolute;
-        width: 70%;
+        width: 220px;
+        max-width: 250px;
         transform: translateY(-15%);
     }
 }
@@ -160,8 +165,8 @@ p {
 .landing {
     height: 13em;
     background: $primarybg;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: space-around;
     align-items: center;
     margin: 3em 0 0 0;
@@ -171,6 +176,7 @@ p {
 .landing__bg {
     position: absolute;
     width: 100%;
+    height: 100%;
 }
 
 .landing__valueprop {
@@ -179,7 +185,10 @@ p {
     font-size: 0.8em;
     letter-spacing: 2px;
     text-transform: uppercase;
-
+    z-index: 1;
+    width: 140%;
+    display: flex;
+    grid-column: 2 / 5;
 }
 
 .landing__valueprop_span1 {
@@ -193,13 +202,14 @@ p {
 }
 
 .landing__valueprop_span3 {
-    font-size: 1.6em;
+    font-size: 2em;
     font-weight: 700;
 }
 
 .landing__cta {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    grid-column: 5 / 6;
 
     svg {
         justify-self: flex-end;
@@ -220,7 +230,6 @@ p {
     button {
         grid-column: 2 / 5;
         grid-row: 8 / 5;
-        width: 90%;
     }
 }
 
@@ -298,9 +307,6 @@ p {
         text-align: center;
     }
 
-    button {
-        width: 30%;
-    }
 }
 
 .about__us.subheaders {
@@ -435,22 +441,22 @@ p {
     justify-content: center;
     align-items: center;
 
-    button {
-        width: 50%;
-    }
-    ul{
+    ul {
         margin: 0 0 1em 0;
-        li{
+
+        li {
             font-size: 0.9em;
             margin: 0 0 0.5em 0;
-            i{
+
+            i {
                 margin: 0 1em 0 0;
             }
         }
     }
-    
-    h3{
+
+    h3 {
         font-weight: 600;
+        margin: 0 0 0.5em 0;
     }
 }
 
@@ -494,7 +500,6 @@ p {
     button {
         grid-column: 1 / -1;
         grid-row: 20 / 21;
-        width: 50%;
         justify-self: center;
     }
 }
@@ -560,7 +565,8 @@ p {
 /*--------FOOTER-----------------*/
 
 .footer {
-    height: 50vh;
+    height: 40vh;
+    max-height: 40vh;
     background: $secondarybg;
     margin: 2em 0 0 0;
     display: flex;
@@ -574,7 +580,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em 1em;
 
     span {
         margin: 0.5em;
@@ -585,7 +591,7 @@ p {
 
         i {
             padding: 0.2em;
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
     }
 
@@ -600,12 +606,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em 1em;
 
     div {
         i {
             padding: 0.2em;
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
     }
 }
@@ -614,22 +620,29 @@ p {
 
 /*Medium screen-----------------------------*/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 30.1em) {
     @import 'medium';
 }
 
 /*large screen-----------------------------*/
 
-@media screen and (min-width: 768px) {
-    @import 'medium';
+@media screen and (min-width: 48.1em) {
+    @import 'large';
+}
+
+/*xlarge screen-----------------------------*/
+
+@media screen and (min-width: 60.5em) {
+    @import 'xlarge';
 }
 
 /*--------BACKGROUNDS--------*/
 
-.pagebg {
+/* .pagebg {
     background: url('/illustrations/dottedbg.png');
     background-repeat: no-repeat;
-}
+    background-size: 100%;
+} */
 
 /*--------ANIMATIONS--------*/
 
