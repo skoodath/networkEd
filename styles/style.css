@@ -177,9 +177,10 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
   z-index: 1;
-  width: 140%;
+  width: 100%;
   display: flex;
-  grid-column: 2/5;
+  grid-column: 2/-1;
+  grid-row: 1/4;
 }
 
 .landing__valueprop_span1 {
@@ -200,7 +201,8 @@ p {
 .landing__cta {
   display: flex;
   justify-content: center;
-  grid-column: 5/6;
+  grid-column: 1/-1;
+  grid-row: 3/5;
 }
 .landing__cta svg {
   justify-self: flex-end;
@@ -211,7 +213,7 @@ p {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
-  padding: 1.5em;
+  padding: 0;
   height: max-content;
   justify-content: space-around;
   align-items: center;
@@ -224,11 +226,11 @@ p {
 .intro__text {
   grid-column: 1/-1;
   grid-row: 2/6;
-  padding: 1em 2em;
+  padding: 2em;
 }
 
 .intro__image {
-  grid-column: 2/-1;
+  grid-column: 3/-1;
   grid-row: 5/8;
 }
 .intro__image img {
@@ -247,10 +249,11 @@ p {
   height: 45vh;
   position: relative;
   display: grid;
-  padding: 3em 0 0 0;
+  padding: 1em 0 0 0;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, auto);
   justify-content: center;
+  margin: 3em 0 0 0;
 }
 .about__hero blockquote {
   color: #fff;
@@ -258,14 +261,14 @@ p {
   font-weight: bold;
   grid-column: 1/-1;
   grid-row: 1/5;
-  margin: 1em 1em 0.3em;
+  margin: 0 1em 0.3em;
   text-align: center;
 }
 .about__hero span {
   color: #fff;
   font-size: 0.8em;
   background-color: transparent;
-  grid-column: 2/-1;
+  grid-column: 1/-1;
   grid-row: 4/4;
   margin: 1em 0 0 4em;
 }
@@ -527,7 +530,7 @@ p {
   height: 40vh;
   max-height: 40vh;
   background: #03243C;
-  margin: 2em 0 0 0;
+  margin: 2em 0 1em 0;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -572,19 +575,23 @@ p {
 /*Medium screen-----------------------------*/
 /*large screen-----------------------------*/
 /*xlarge screen-----------------------------*/
-@media screen and (min-width: 60.5em) {
+@media screen and (min-width: 64em) {
   p {
     font-size: 16px;
   }
 
   .subheaders {
     font-weight: 400;
-    margin: 2em 0 0 0;
+    margin: 3em 0 0 0;
     position: relative;
     font-size: 2em;
   }
 
   /*--------HEADER-----------------*/
+  .header {
+    padding: 1em;
+  }
+
   .header__hamburger {
     display: none;
   }
@@ -626,17 +633,17 @@ p {
 
   /*--------LANDING-----------------*/
   .landing {
-    height: 45vh;
+    height: 40vh;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    margin: 3em 0 0 0;
+    margin: 5em 0 0 0;
     position: relative;
   }
 
   .landing__valueprop {
     margin: 0;
     font-size: 24px;
-    grid-column: 3/8;
+    grid-column: 2/8;
   }
 
   .landing__cta {
@@ -658,8 +665,8 @@ p {
   .intro__text {
     grid-column: 3/10;
     grid-row: 1/3;
-    padding: 3em 0 0 0;
-    font-size: 1.3em;
+    padding: 1em 0 0 0;
+    font-size: 1.2em;
   }
 
   .intro__image {
@@ -679,45 +686,51 @@ p {
   /*--------ABOUT-----------------*/
   .about__hero {
     background: #03243C;
-    height: 50vh;
+    height: 60vh;
     position: relative;
     display: grid;
     padding: 0;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
     justify-content: center;
+    margin: 4em 0 0 0;
   }
   .about__hero blockquote {
     font-size: 2.5em;
-    grid-column: 3/6;
+    grid-column: 2/6;
     grid-row: 1/6;
-    margin: 2em 0 0 0;
+    margin: 0;
     text-align: left;
     justify-content: flex-end;
+    align-self: center;
   }
   .about__hero span {
     font-size: 1em;
-    grid-column: 3/5;
+    grid-column: 2/5;
     grid-row: 5/6;
     margin: 0;
-    justify-self: flex-start;
+    align-self: flex-end;
   }
 
   .about__overlay {
     width: 100%;
     height: 100%;
-    grid-column: 5/12;
-    grid-row: 2/6;
+    grid-column: 3/12;
+    grid-row: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .about__overlay img {
-    max-width: 800px;
+    width: 100%;
+    max-height: 370px;
     object-fit: cover;
   }
 
   .about__text p {
     padding: 1.6em 10em;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .about__items {
@@ -778,12 +791,12 @@ p {
     padding: 2em 13em;
   }
   .approach__about p {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .approach__seasons p {
     padding: 2em 10em;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .approach__season1 {
@@ -806,6 +819,7 @@ p {
   /*--------NETWORK SCIENCE-----------------*/
   .netscience {
     align-items: stretch;
+    margin: 0 0 1em 0;
   }
 
   .netscience__text h4 {
@@ -814,7 +828,7 @@ p {
   }
   .netscience__text p {
     padding: 1em 10em;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .netscience__apps {
@@ -860,6 +874,26 @@ p {
   .netscience__circle6 {
     grid-column: 9/11;
     grid-row: 5/7;
+  }
+
+  /*--------FOOTER-----------------*/
+  .footer {
+    padding: 2em 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    color: #fff;
+    align-items: center;
+  }
+
+  .footer__contact {
+    grid-column: 2/5;
+    grid-row: 1/3;
+  }
+
+  .footer__social {
+    grid-column: 5/8;
+    grid-row: 1/3;
   }
 }
 /*--------BACKGROUNDS--------*/
