@@ -14,6 +14,7 @@ myMenuClose.addEventListener('click', showmenu);
 const scrollTodiv = (e) => {
 
     let datavalue = e.target.getAttribute("data-value");
+    console.log(datavalue);
     if(datavalue === "about"){
         let aboutDiv = document.querySelector('.about');
         aboutDiv.scrollIntoView({ block: "start" });
@@ -26,11 +27,26 @@ const scrollTodiv = (e) => {
         let netDiv = document.querySelector('.netscience');
         netDiv.scrollIntoView({ block: "start" });
         showmenu();
+    } else if (datavalue === "home") {
+        let hmbtn = document.querySelector('.landing');
+        hmbtn.scrollIntoView({ block: "start" });
+        showmenu();
     } else if (datavalue === "blog") {
         location.href = 'http://blog.networked.in/';
         showmenu();
     }
 }
+const navhomeencap = () => {
+    const homebtn = document.querySelector('.header__home');
+
+    const navhome = () => {
+    let homepage = document.querySelector('.landing');
+    homepage.scrollIntoView({ block: "start" });
+    }
+    homebtn.addEventListener('click', navhome);
+}
+navhomeencap();
+
 
 const menuItems = document.querySelectorAll('.header__menuitem');
 

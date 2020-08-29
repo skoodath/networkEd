@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desc" content="Live ranking">
     <title>Network Ed</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
     <header id="titlebar" class="header">
-        <div class="header__logo">
+        <a class="header__logo">
             <img src="/illustrations/neted_logo.png" alt="">
-        </div>
+        </a>
+        <span class="header__home header__home_smhide">
+            <i class="fas fa-home"></i>
+        </span>
         <div class="header__hamburger">
             <i class="fas fa-chevron-up"></i>
             <span>Menu</span>
         </div>
-        <!-- <div class="header__home">Home</div> -->
         <nav class="header__navbar header__navbar_hide">
             <div class="header__close">
                 <i class="fas fa-chevron-down"></i>
             </div>
             <ul class="header__menu">
+                <li class="header__menuitem header__menuitem_smhide" data-value="home">Home</li>
                 <li class="header__menuitem" data-value="about">About</li>
                 <li class="header__menuitem" data-value="approach">Our Approach</li>
                 <li class="header__menuitem" data-value="netscience">What is network Science?</li>
@@ -41,7 +45,7 @@
                 </div>
         </section>
         <section class="intro pagebg">
-            <p class="intro__text">NetworkED is an initiative that develops a robus <b>evidence based toolbox</b> to gain insights about <b>real-world complexity</b>
+            <p class="intro__text">NetworkED is an initiative that develops a robust <b>evidence based toolbox</b> to gain insights about <b>real-world complexity</b>
             through fun experiences</p>
 
             <div class="intro__image">
@@ -55,8 +59,8 @@
                     “Life is at base a network.<br>
                     It thrives on connection.”
                 </blockquote>
-                <span>-Curtis Ogden</span>
-                <!-- <span>Senior Associate Institute for Social Change</span> -->
+                <span class="about__quote">-Curtis Ogden</span><br>
+                <span class="about__hero_role">Senior Associate Institute for Social Change</span>
                 <div class="about__overlay">
                     <img src="/illustrations/balloon.png" alt="People holding balloons">
                 </div>
@@ -66,7 +70,6 @@
                 <p>We’re a community of passionate researchers, educators and industry mentors with a common interest to introduce networks
                 to kids across different countries. The goal of the community is to create a thriving ecosystem for the torchbearers of
                 network thinking, who share best practices on methods, tools and pains of demystifying complexity for kids.</p>
-                <button class="cta__btn">Join Us</button>
             </div>
             <div class="about__items">
                 <div class="about__circle about__circle1">
@@ -97,6 +100,7 @@
                     <img src="/illustrations/inf7.png" alt="">
                     <p>Actionable Solutions</p>
                 </div>
+                
             </div>
         </section>
         <section class="approach pagebg">
@@ -104,29 +108,99 @@
             <div class="approach__details">
                 <div class="approach__about">
                     <p>Every year, NetworkED hosts a short term fellowship program which orients and equips children with tools to explore
-                    networks in the real world through different pathways.</p>
-                    <p>The fellowship is rigorous, immersive and challenging, as
-                    children investigate biological, physical and social networks through a range of digital and physical experiences. And
-                    of course, we love to goof around as much as we can!</p>
+                    networks in the real world through different pathways. </p>
+                    <div>
+                        <span>Read More</span>
+                        <span></span>
+                    </div>
+                    <p>TThe fellowship acts as a launchpad for children to explore real world complexity through different pathways. The
+                    fellowship is immersive and challenging, as children investigate real world biological, physical and social networks
+                    through a range of digital and physical experiences.</p>
                     <p>The design of the fellowship is done well in advance in collaboration with domain experts, researchers and educators to
                     craft a meaningful and explorative experience grounded in impact. Data and observations from the fellowship program feed
                     into long term research and pedagogy development centered around understanding the science of network thinking in
                     children.</p>
                 </div>
                 <div class="approach__banner">
-                    <p>Coming soon</p> <h3>NetworkED 2021!</h3> <p>Season #1 Social Sleuths</p>
+                    <p>Coming soon</p> <h3>NetworkED 2021!</h3> 
                 </div>
             </div>
             <div class="approach__seasons">
-                <p>
-                    In Season #1, kids explore the world of communities, about how relationships between people, artifacts, and ideas can be
-                    analyzed and interpreted through social network mapping. Kids will investigate and generate data maps of these
-                    relationships to help understand how people communicate and exchange information in any given setting, and perhaps even
-                    track down some critical power hubs that can bring massive social change through real world digital networks. Stay tuned
-                    for updates on the Social Sleuths!
-                </p>
+                
                 <div class="approach__season1">
-                    <img src="/illustrations/Group 171.png" alt="">
+                    <div class="approach__intro">
+                        <h4>Season #1</h4>
+                        <h5>Social Sleuths</h5>
+                        <p>
+                            Explore the world of communities, how relationships between people, artifacts, and ideas can be
+                            analyzed and interpreted through social network mapping.</p> 
+                        <p>Investigate and generate data maps of these
+                            relationships to help understand how people communicate and exchange information in any given setting, and perhaps even
+                            track down some critical power hubs that can bring massive social change through real world digital networks.</p>
+                        </p>
+                    </div>
+                    <div class="approach__season1cards">
+                        <div class="approach__scard approach__scard1">
+                            <img src="/illustrations/ss1.png" alt="season1 social sleuths step1">
+                            <p>
+                                Call from the Law Enforcement Agency
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard2">
+                            <img src="/illustrations/ss2.png" alt="season1 social sleuths step2">
+                            <p>
+                                Virtual Selection round
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard3">
+                            <img src="/illustrations/ss3.png" alt="season1 social sleuths step3">
+                            <p>
+                                Sleuths Announced
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard4">
+                            <img src="/illustrations/ss4.png" alt="season1 social sleuths step4">
+                            <p>
+                                Crime Scene Report
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard5">
+                            <img src="/illustrations/ss5.png" alt="season1 social sleuths step5">
+                            <p>
+                                Detectives Tools 101
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard6">
+                            <img src="/illustrations/ss6.png" alt="season1 social sleuths step6">
+                            <p>
+                                Sleuthing Partners
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard7">
+                            <img src="/illustrations/ss7.png" alt="season1 social sleuths step7">
+                            <p>
+                                Work with an industry mentor
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard8">
+                            <img src="/illustrations/ss8.png" alt="season1 social sleuths step8">
+                            <p>
+                                Detective Diaries - TED talk style
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard9">
+                            <img src="/illustrations/ss9.png" alt="season1 social sleuths step9">
+                            <p>
+                                Stay connected and solve cases
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard10">
+                            <img src="/illustrations/ss10.png" alt="season1 social sleuths step10">
+                            <p>
+                                University Partners get in touch
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="approach__upcoming">
@@ -213,6 +287,18 @@
     </main>
     <script src="core.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/node_modules/animejs/lib/anime.min.js"></script>
+    <!-- <script>
+        anime({
+                targets: '.about__circle',
+                rotate: '1turn',
+                direction: 'alternate',
+                duration: 1200,
+                loop: true,
+                autoplay: true,
+                easing: 'linear'
+            });
+    </script> -->
     <script>
         particlesJS.load('particles-js', 'particles.json');
 
