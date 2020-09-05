@@ -1,4 +1,15 @@
 
+const loadActions = () => {
+    let copy = document.querySelector('.footer__copy p span');
+    console.log(copy);
+    const loadThis = () => {
+        let currentYr = new Date();
+        copy.innerHTML = new Date().getFullYear();
+        console.log(currentYr);
+    }
+    document.addEventListener('DOMContentLoaded', loadThis);
+}
+
 const hamburger = document.querySelector('.header__hamburger');
 const myMenuClose = document.querySelector('.header__close');
 
@@ -68,3 +79,7 @@ const menuItems = document.querySelectorAll('.header__menuitem');
 for (let item of menuItems){
     item.addEventListener('click', scrollTodiv);
 }
+
+/*----------CALLING FUNCTIONS-----------*/
+
+loadActions();

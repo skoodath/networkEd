@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 /*--------MAIN-----------------*/
 * {
   padding: 0;
@@ -343,7 +343,6 @@ body {
 }
 .about__text p {
   padding: 1.6rem;
-  text-align: center;
 }
 
 .about__us.subheaders {
@@ -464,7 +463,7 @@ body {
   background: #FFDE70;
 }
 .approach__seasons p {
-  padding: 1rem 1rem 0.3rem;
+  padding: 1rem 2rem 0.3rem;
 }
 
 .approach__season1 {
@@ -512,12 +511,13 @@ body {
   margin: 0 0 1rem 0;
 }
 .approach__upcoming ul li {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0 0 0.5rem 0;
   text-align: center;
-  width: 12rem;
-  height: 12rem;
-  background: #E3DFD1;
+  width: 10rem;
+  height: 10rem;
+  border: 3px solid #FFDE70;
+  background: #eeece6;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -642,30 +642,56 @@ body {
 
 /*--------FOOTER-----------------*/
 .footer {
-  height: 40vh;
-  max-height: 40vh;
   background: #03243C;
   margin: 2rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   color: #fff;
-  align-items: center;
 }
 
-.footer__contact {
+.footer__inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  padding: 0 1rem;
 }
-.footer__contact a {
-  margin: 0 0 0 0.5rem;
-  text-decoration: none;
+.footer__inner a {
   color: #fff;
-  border-bottom: 1px solid #fff;
+  text-decoration: underline;
+}
+.footer__inner a:visited {
+  color: #fff;
+}
+
+.footer__social,
+.footer__contact,
+.footer__resource,
+.footer__logo,
+.footer__copy {
+  padding: 2rem 0;
+}
+.footer__social a,
+.footer__contact a,
+.footer__resource a,
+.footer__logo a,
+.footer__copy a {
+  margin: 0 1rem 0 0;
+}
+
+.footer__contact i {
+  margin: 0 1rem 0 0;
+}
+
+.footer__resource {
+  border-top: 1px solid #4e4e4e;
+}
+
+.footer__social {
+  border-top: 1px solid #4e4e4e;
+}
+
+.footer__copy {
+  border-top: 1px solid #4e4e4e;
+  margin: 0 0 2rem 0;
 }
 
 /*--------MEDIA QUERIES--------*/

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 @import 'variables';
 
 /*--------MAIN-----------------*/
@@ -363,7 +363,6 @@ body {
 
     p {
         padding: 1.6rem;
-        text-align: center;
     }
 
 }
@@ -495,7 +494,7 @@ body {
     background: $primarybg;
 
     p {
-        padding: 1rem 1rem 0.3rem;
+        padding: 1rem 2rem 0.3rem;
     }
 }
 
@@ -547,12 +546,13 @@ body {
         margin: 0 0 1rem 0;
 
         li {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             margin: 0 0 0.5rem 0;
             text-align: center;
-            width: 12rem;
-            height: 12rem;
-            background: #E3DFD1;
+            width: 10rem;
+            height: 10rem;
+            border: 3px solid $primarybg;
+            background: #eeece6;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
@@ -694,33 +694,56 @@ body {
 /*--------FOOTER-----------------*/
 
 .footer {
-    height: 40vh;
-    max-height: 40vh;
     background: $secondarybg;
     margin: 2rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     color: #fff;
-    align-items: center;
 }
 
-.footer__contact {
+.footer__inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    padding: 0 1rem;
 
     a {
-        margin: 0 0 0 0.5rem;
-        text-decoration: none;
         color: #fff;
-        border-bottom: 1px solid #fff;
+        text-decoration: underline;
+
+        &:visited {
+            color: #fff;
+        }
     }
 
+}
+.footer__social,
+.footer__contact,
+.footer__resource,
+.footer__logo,
+.footer__copy{
+    padding: 2rem 0;
+    a{
+        margin: 0 1rem 0 0;
+    }
+}
 
+.footer__contact{
+    i{
+        margin: 0 1rem 0 0;
+    }
+}
+
+.footer__resource {
+    border-top: 1px solid #4e4e4e;
+}
+
+.footer__social {
+    border-top: 1px solid #4e4e4e;
+}
+
+.footer__copy {
+    border-top: 1px solid #4e4e4e;
+    margin: 0 0 2rem 0;
 }
 
 
