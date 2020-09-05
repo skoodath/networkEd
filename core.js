@@ -25,7 +25,7 @@ const scrollTodiv = (e) => {
         let aboutDiv = document.querySelector('.about');
         aboutDiv.scrollIntoView({ block: "start" });
         showmenu();
-    } else if (datavalue === "approach") {
+    } else if (datavalue === "fellowship") {
         let apprDiv = document.querySelector('.approach');
         apprDiv.scrollIntoView({ block: "start" });
         showmenu();

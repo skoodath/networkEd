@@ -27,7 +27,7 @@
             <ul class="header__menu">
                 <li class="header__menuitem header__menuitem_smhide" data-value="home">Home</li>
                 <li class="header__menuitem" data-value="about">About</li>
-                <li class="header__menuitem" data-value="approach">Our Approach</li>
+                <li class="header__menuitem" data-value="fellowship">The Fellowship</li>
                 <li class="header__menuitem" data-value="netscience">What is network Science?</li>
                 <li class="header__menuitem" data-value="blog">Blog</li>
             </ul>
@@ -73,7 +73,6 @@
                 <div class="intro__image">
                     <img src="/illustrations/stargazer.png" alt="Image of a star gazing kid">
                 </div>
-                <button class="cta__btn">Join Us!</button>
             </article>
             
         </section>
@@ -96,14 +95,30 @@
                 <div class="about__text">
                     <p>
                         We’re a community of passionate researchers, educators and industry mentors with a common interest to introduce networks
-                        to kids across different countries. The goal of the community is to create a thriving ecosystem for the torchbearers of
-                        network thinking, who share best practices on methods, tools and pains of demystifying complexity for kids.
+                        to kids across different countries. The goal of the community is to create a thriving ecosystem who share best practices
+                        on methods and tools to help children master the art of insight generation using networks.
+                    </p>
+                    <p>
+                        <span>Who can join?</span><br>
+                        Anyone interested in how to enhance cognitive functions of children using network representations from real world
+                        experiences.
+
                     </p>
                 </div> 
             </article>
             
             <article class="about__items inner">
                 <div class="about__circle about__circle1">
+                    <div class="about__circle_img">
+                        <img src="/illustrations/inf7.png" alt="">
+                    </div>
+                    <div class="about__circle_text">
+                        <h4>Actionable Solutions</h4>
+                        <p>A library of educational resources (curriculum, tools and methods) that can be immediately put to practice.
+                        </p>
+                    </div>
+                </div>
+                <div class="about__circle about__circle2">
                     <div class="about__circle_img">
                         <img src="/illustrations/inf1.png" alt="">
                     </div>
@@ -113,7 +128,7 @@
                     Network Science</p>   
                     </div>
                 </div>
-                <div class="about__circle about__circle2">
+                <div class="about__circle about__circle3">
                     <div class="about__circle_img">
                         <img src="/illustrations/inf2.png" alt="">
                     </div>
@@ -121,17 +136,6 @@
                         <h4>Peer networks</h4>
                         <p>Connect with like minded people of your choice to enrich your learning process</p>
                     </div>
-                </div>
-
-                <div class="about__circle about__circle3">
-                    <div class="about__circle_img">
-                        <img src="/illustrations/inf5.png" alt="">
-                    </div>
-                    <div class="about__circle_text">
-                        <h4>small win</h4>
-                        <p>A space to celebrate your progress, be it classroom victories or nailing project milestones</p>
-                    </div>
-                    
                 </div>
                 <div class="about__circle about__circle4">
                     <div class="about__circle_img">
@@ -144,19 +148,31 @@
                 </div>
                 <div class="about__circle about__circle5">
                     <div class="about__circle_img">
-                        <img src="/illustrations/inf7.png" alt="">
+                        <img src="/illustrations/inf5.png" alt="">
                     </div>
                     <div class="about__circle_text">
-                        <h4>Actionable Solutions</h4>
-                        <p>A library of educational resources (curriculum, tools and methods) that can be immediately put to practice.</p>
+                        <h4>small win</h4>
+                        <p>A space to celebrate your progress, be it classroom victories or nailing project milestones</p>
                     </div>
+                    
                 </div>
                 
+            </article>
+            <article class="about__joinus inner">
+                <form id="subscribe" class="about__subscribe">
+                    <label for="visitor">Full Name</label>
+                    <input type="text" name="visitor" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="msgbox">Message</label>
+                    <textarea name="msgbox" id="msgbox" cols="30" rows="5"></textarea>
+                    <button type="submit">Subscribe</button>
+                </form>
             </article>
         </section>
         <section class="approach pagebg">
             <article class="approach__inner_desc inner">
-                <h3 class="approach__header subheaders">Our Approach</h3>
+                <h3 class="approach__header subheaders">The Fellowship</h3>
                 <div class="approach__details">
                     <div class="approach__about">
                         <p>
@@ -177,23 +193,23 @@
                             children.
                         </p>
                     </div>
-                    <div class="approach__banner">
-                        <p>
-                            Coming soon
-                        </p> 
-                        <h3>
-                            NetworkED 2021!
-                        </h3> 
-                    </div>
                 </div>
             </article>
             <article class="approach__season_wrap inner">
                 <div class="approach__seasons">
                 
                     <div class="approach__season1">
+                        <div class="approach__banner">
+                            <h3>networkEd 2020</h3>
+                            <h4>season#1</h4>
+                            <div class="approach__bannerimg">
+                                <img src="/illustrations/ss8.png" alt="Social Sleuths thumbnail image">
+                            </div>
+                            <h3>Social Sleuths</h3>
+                        
+                        </div>
                         <div class="approach__intro">
-                            <h4>Season #1</h4>
-                            <h5>Social Sleuths</h5>
+                            
                             <p>
                                 Explore the world of communities, how relationships between people, artifacts, and ideas can be
                                 analyzed and interpreted through social network mapping.
@@ -201,70 +217,77 @@
                             <p>
                                 Investigate and generate data maps of these
                                 relationships to help understand how people communicate and exchange information in any given setting, and perhaps even
-                                track down some critical power hubs that can bring massive social change through real world digital networks.</p>
+                                track down some critical power hubs that can bring massive social change through real world digital networks.
+                            </p>
+       
+                        </div>
+                        <div class="approach__cta">
+                            <svg width="45" height="45" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="39.5" cy="39.5" r="28" stroke="#03243C" />
+                                <path d="M65.1675 41.4218L25.1497 62.0755L27.272 17.0922L65.1675 41.4218Z" fill="#03243C" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="approach__season1cards">
+                        <div class="approach__scard approach__scard1">
+                            <img src="/illustrations/ss1.png" alt="season1 social sleuths step1">
+                            <p>
+                                Call from the Law Enforcement Agency
                             </p>
                         </div>
-                        <div class="approach__season1cards">
-                            <div class="approach__scard approach__scard1">
-                                <img src="/illustrations/ss1.png" alt="season1 social sleuths step1">
-                                <p>
-                                    Call from the Law Enforcement Agency
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard2">
-                                <img src="/illustrations/ss2.png" alt="season1 social sleuths step2">
-                                <p>
-                                    Virtual Selection round
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard3">
-                                <img src="/illustrations/ss3.png" alt="season1 social sleuths step3">
-                                <p>
-                                    Sleuths Announced
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard4">
-                                <img src="/illustrations/ss4.png" alt="season1 social sleuths step4">
-                                <p>
-                                    Crime Scene Report
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard5">
-                                <img src="/illustrations/ss5.png" alt="season1 social sleuths step5">
-                                <p>
-                                    Detectives Tools 101
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard6">
-                                <img src="/illustrations/ss6.png" alt="season1 social sleuths step6">
-                                <p>
-                                    Sleuthing Partners
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard7">
-                                <img src="/illustrations/ss7.png" alt="season1 social sleuths step7">
-                                <p>
-                                    Work with an industry mentor
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard8">
-                                <img src="/illustrations/ss8.png" alt="season1 social sleuths step8">
-                                <p>
-                                    Detective Diaries - TED talk style
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard9">
-                                <img src="/illustrations/ss9.png" alt="season1 social sleuths step9">
-                                <p>
-                                    Stay connected and solve cases
-                                </p>
-                            </div>
-                            <div class="approach__scard approach__scard10">
-                                <img src="/illustrations/ss10.png" alt="season1 social sleuths step10">
-                                <p>
-                                    University Partners get in touch
-                                </p>
-                            </div>
+                        <div class="approach__scard approach__scard2">
+                            <img src="/illustrations/ss2.png" alt="season1 social sleuths step2">
+                            <p>                                    
+                                Virtual Selection round
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard3">
+                            <img src="/illustrations/ss3.png" alt="season1 social sleuths step3">
+                            <p>
+                                Sleuths Announced
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard4">
+                            <img src="/illustrations/ss4.png" alt="season1 social sleuths step4">
+                            <p>
+                                Crime Scene Report
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard5">
+                            <img src="/illustrations/ss5.png" alt="season1 social sleuths step5">
+                            <p>
+                                Detectives Tools 101
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard6">
+                            <img src="/illustrations/ss6.png" alt="season1 social sleuths step6">
+                            <p>
+                                Sleuthing Partners
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard7">
+                            <img src="/illustrations/ss7.png" alt="season1 social sleuths step7">
+                            <p>
+                                Work with an industry mentor
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard8">
+                            <img src="/illustrations/ss8.png" alt="season1 social sleuths step8">
+                            <p>
+                                Detective Diaries - TED talk style
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard9">
+                            <img src="/illustrations/ss9.png" alt="season1 social sleuths step9">
+                            <p>
+                                Stay connected and solve cases
+                            </p>
+                        </div>
+                        <div class="approach__scard approach__scard10">
+                            <img src="/illustrations/ss10.png" alt="season1 social sleuths step10">
+                            <p>
+                                University Partners get in touch
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -273,11 +296,10 @@
             <article class="approach__upcoming inner">
                 <h3>Upcoming Seasons</h3>
                 <ul>
-                    <li><i class="fas fa-lock"></i>Epidemic Intelligence Service</li>
-                    <li><i class="fas fa-lock"></i>Bio Investigators</li>
-                    <li><i class="fas fa-lock"></i>Operation Fake News</li>
+                    <li><i class="fas fa-lock"></i><br>Epidemic Intelligence Service</li>
+                    <li><i class="fas fa-lock"></i><br>Bio Investigators</li>
+                    <li><i class="fas fa-lock"></i><br>Operation Fake News</li>
                 </ul>
-                <button class="cta__btn">join us</button>
             </article>
         </section>
         <section class="netscience pagebg">
@@ -335,7 +357,7 @@
             <h1>networkEd<sup>&reg;</sup></h1>
             <div class="footer__contact inner">
                     
-                    <a href="">Email</a>
+                    <a href="mailto: archana.udayagiri@networked.in">email</a>
                     
                     <a href="">twitter</a>
                     
