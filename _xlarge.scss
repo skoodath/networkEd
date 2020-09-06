@@ -2,7 +2,6 @@
     font-size: 16px;
 }
 
-
 .subheaders {
     font-weight: 400;
     margin: 3em 0 0 0;
@@ -77,7 +76,7 @@
 
 .landing {
     align-items: center;
-    margin: 5em 0 0 0;
+    margin: 0;
     position: relative;
 }
 
@@ -90,7 +89,8 @@
     margin: 0;
     font-size: 24px;
     grid-column: 1 / -1;
-    max-height: 80rem;
+    grid-row: 4 / 9;
+    max-width: 80rem;
 }
 
 .landing__valueprop_span1 {
@@ -113,6 +113,7 @@
 
 .landing__cta {
     grid-column: 1 / -1;
+    grid-row: 10 / 11;
 }
 
 /*--------INTRO-----------------*/
@@ -161,7 +162,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, auto);
     justify-content: center;
-    margin: 4em 0 0 0;
+    margin: 1rem 0 0 0;
     max-width: 80rem;
 
     blockquote {
@@ -207,7 +208,6 @@
 .about__text {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-
     p {
         padding: 0 0 1.6rem 0;
         max-width: 80rem;
@@ -223,18 +223,24 @@
 .about__items {
     display: flex;
     flex-direction: column;
-    height: 70vh;
     justify-content: center;
     align-items: center;
 }
 
 .about__circle {
-    margin: 0;
+    margin: 0 0 1rem 0;
     max-width: 80rem;
-
+    width: 30rem;
+    height: 150px;
     p {
         font-size: 0.75em;
-        font-weight: bold;
+        font-weight: normal;
+    }
+}
+.about__circle_text{
+    width: 40rem;
+    p{
+        text-align: left;
     }
 }
 
@@ -252,7 +258,6 @@
 .approach__season1 {
     width: 70%;
     margin: 0 auto;
-    height: 60vh;
     display: flex;
 
 }
@@ -302,6 +307,7 @@
     display: flex;
     flex-direction: column;
     max-width: 80rem;
+
     p {
         padding: 1em 10em;
     }
@@ -310,6 +316,7 @@
 .netscience__apps {
     grid-template-columns: repeat(12, 1fr);
     max-width: 80rem;
+
     h3 {
         justify-self: center;
         grid-column: 1 / -1;
@@ -393,6 +400,64 @@
     margin: 0;
 }
 
+.footer__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:visited {
+            color: #fff;
+        }
+    }
+
+}
+
+.footer__social,
+.footer__contact,
+.footer__resource,
+.footer__logo,
+.footer__copy {
+    padding: 1.5rem 1rem;
+    ul{
+        flex-direction: column;
+        li {
+        margin: 0 0.5rem 0 0;
+    } 
+    }
+    
+}
+
+.footer__logo {
+    grid-column: 2 / 5;
+    a {
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+}
+
 .footer__contact {
-    flex-direction: row;
+    grid-column: 5 / 9;
+    i {
+        margin: 0 1rem 0 0;
+    }
+}
+
+.footer__resource {
+    grid-column: 9 / 11;
+    border-top: 1px solid transparent;
+}
+
+.footer__social {
+    grid-column: 11 / 12;
+    border-top: 1px solid transparent;
+}
+
+.footer__copy {
+    grid-column: 2 / 12;
+    grid-row: 2 / 6;
+    margin: 0;
 }

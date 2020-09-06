@@ -61,7 +61,7 @@ body {
   left: 0;
   right: 0;
   display: flex;
-  padding: 0 1rem;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
   background: #fff;
@@ -99,7 +99,6 @@ body {
   align-content: center;
   position: relative;
   width: 100%;
-  height: 50px;
 }
 .header__logo img {
   display: inline-block;
@@ -151,6 +150,17 @@ body {
   cursor: pointer;
   color: #272727;
 }
+.header__menuitem::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #FFDE70;
+  transition: width 0.5s;
+}
+.header__menuitem:hover::after {
+  width: 100%;
+}
 
 .header__menuitem_smhide {
   display: none;
@@ -173,7 +183,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0 0 0;
+  margin: 0;
   position: relative;
 }
 
@@ -200,7 +210,7 @@ body {
   width: 100%;
   align-self: center;
   grid-column: 1/-1;
-  grid-row: 2/9;
+  grid-row: 4/9;
   text-align: center;
   line-height: 1.6;
 }
@@ -235,7 +245,7 @@ body {
   display: flex;
   justify-content: center;
   grid-column: 1/-1;
-  grid-row: 8/10;
+  grid-row: 10/11;
 }
 .landing__cta svg {
   justify-self: flex-end;
@@ -360,33 +370,47 @@ body {
 
 .about__circle {
   padding: 0.3rem;
+  height: 8rem;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 0 0 1rem 0;
   position: relative;
   border-radius: 0.6rem;
+  border-top: 3px solid #FFDE70;
+  box-shadow: 0 0 5px #eeece6;
 }
 
 .about__circle_img {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   justify-self: center;
   background: #fff;
+  border: 2px solid #eeece6;
+  z-index: 2;
 }
 
+.about__circle_text {
+  margin: auto 0 auto -1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 0 10px 10px 0;
+}
 .about__circle_text h4 {
   font-size: 0.9rem;
 }
 .about__circle_text p {
   font-size: 0.8rem;
-  font-weight: 300;
-  padding: 0 2rem;
   display: flex;
-  text-align: center;
+  padding: 0 0 0 2.5rem;
 }
 
 .about__joinus {
@@ -404,14 +428,27 @@ body {
   border: none;
   border-radius: 5px;
   padding: 0.3rem;
-  background: #FFE07A4A;
+  background: #eeece6;
+  display: block;
+}
+.about__subscribe input:focus {
+  border-radius: 0;
+  border-bottom: 2px solid #FFDE70;
+  transition: border-bottom, background-color 0.5s;
+  background: #fff;
 }
 .about__subscribe textarea {
   border: none;
   border-radius: 5px;
   padding: 0.3rem;
-  background: #FFE07A4A;
+  background: #eeece6;
   resize: none;
+}
+.about__subscribe textarea:focus {
+  border-radius: 0;
+  border-bottom: 2px solid #FFDE70;
+  transition: border-bottom, background-color 0.5s;
+  background: #fff;
 }
 .about__subscribe button {
   margin: 1rem 0 0 0;
@@ -508,14 +545,15 @@ body {
   align-items: center;
 }
 .approach__upcoming ul {
-  margin: 0 0 1rem 0;
+  margin: 0;
+  display: flex;
 }
 .approach__upcoming ul li {
   font-size: 0.8rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0.3rem;
   text-align: center;
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border: 3px solid #FFDE70;
   background: #eeece6;
   border-radius: 50%;
@@ -652,7 +690,7 @@ body {
 .footer__inner {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 0;
 }
 .footer__inner a {
   color: #fff;
@@ -667,16 +705,32 @@ body {
 .footer__resource,
 .footer__logo,
 .footer__copy {
-  padding: 2rem 0;
+  padding: 1.5rem 1rem;
 }
-.footer__social a,
-.footer__contact a,
-.footer__resource a,
-.footer__logo a,
-.footer__copy a {
-  margin: 0 1rem 0 0;
+.footer__social ul,
+.footer__contact ul,
+.footer__resource ul,
+.footer__logo ul,
+.footer__copy ul {
+  display: flex;
+}
+.footer__social ul li,
+.footer__contact ul li,
+.footer__resource ul li,
+.footer__logo ul li,
+.footer__copy ul li {
+  margin: 0 0.5rem 0 0;
+  text-decoration: underline;
 }
 
+.footer__logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.footer__contact {
+  border: none;
+}
 .footer__contact i {
   margin: 0 1rem 0 0;
 }
@@ -774,7 +828,7 @@ body {
 
   .landing {
     align-items: center;
-    margin: 5em 0 0 0;
+    margin: 0;
     position: relative;
   }
 
@@ -787,7 +841,8 @@ body {
     margin: 0;
     font-size: 24px;
     grid-column: 1/-1;
-    max-height: 80rem;
+    grid-row: 4/9;
+    max-width: 80rem;
   }
 
   .landing__valueprop_span1 {
@@ -809,6 +864,7 @@ body {
 
   .landing__cta {
     grid-column: 1/-1;
+    grid-row: 10/11;
   }
 
   /*--------INTRO-----------------*/
@@ -853,7 +909,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, auto);
     justify-content: center;
-    margin: 4em 0 0 0;
+    margin: 1rem 0 0 0;
     max-width: 80rem;
   }
   .about__hero blockquote {
@@ -911,18 +967,26 @@ body {
   .about__items {
     display: flex;
     flex-direction: column;
-    height: 70vh;
     justify-content: center;
     align-items: center;
   }
 
   .about__circle {
-    margin: 0;
+    margin: 0 0 1rem 0;
     max-width: 80rem;
+    width: 30rem;
+    height: 150px;
   }
   .about__circle p {
     font-size: 0.75em;
-    font-weight: bold;
+    font-weight: normal;
+  }
+
+  .about__circle_text {
+    width: 40rem;
+  }
+  .about__circle_text p {
+    text-align: left;
   }
 
   .about__subscribe {
@@ -937,7 +1001,6 @@ body {
   .approach__season1 {
     width: 70%;
     margin: 0 auto;
-    height: 60vh;
     display: flex;
   }
 
@@ -1063,8 +1126,70 @@ body {
     margin: 0;
   }
 
+  .footer__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0;
+  }
+  .footer__inner a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .footer__inner a:visited {
+    color: #fff;
+  }
+
+  .footer__social,
+.footer__contact,
+.footer__resource,
+.footer__logo,
+.footer__copy {
+    padding: 1.5rem 1rem;
+  }
+  .footer__social ul,
+.footer__contact ul,
+.footer__resource ul,
+.footer__logo ul,
+.footer__copy ul {
+    flex-direction: column;
+  }
+  .footer__social ul li,
+.footer__contact ul li,
+.footer__resource ul li,
+.footer__logo ul li,
+.footer__copy ul li {
+    margin: 0 0.5rem 0 0;
+  }
+
+  .footer__logo {
+    grid-column: 2/5;
+  }
+  .footer__logo a {
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
   .footer__contact {
-    flex-direction: row;
+    grid-column: 5/9;
+  }
+  .footer__contact i {
+    margin: 0 1rem 0 0;
+  }
+
+  .footer__resource {
+    grid-column: 9/11;
+    border-top: 1px solid transparent;
+  }
+
+  .footer__social {
+    grid-column: 11/12;
+    border-top: 1px solid transparent;
+  }
+
+  .footer__copy {
+    grid-column: 2/12;
+    grid-row: 2/6;
+    margin: 0;
   }
 }
 /*--------BACKGROUNDS--------*/
