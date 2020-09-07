@@ -292,7 +292,7 @@ body {
 .intro__text {
     grid-column: 1 / -1;
     grid-row: 2 / 6;
-    padding: 2rem;
+    padding: 1.6rem;
 }
 
 .intro__image {
@@ -337,7 +337,7 @@ body {
         font-weight: bold;
         grid-column: 1 / 5;
         grid-row: 1 / 5;
-        margin: 0 0 0 1rem;
+        margin: 0 0 0 1.6rem;
     }
 }
 
@@ -389,13 +389,13 @@ body {
     display: flex;
     flex-direction: column;
     margin: 1rem 0 0 0;
-    padding: 0;
+    padding: 1.6rem 0;
     position: relative;
     max-width: 80rem;
 }
 
 .about__circle {
-    padding: 0.3rem;
+    padding: 1rem;
     height: 10rem;
     display: flex;
     flex-direction: row;
@@ -415,7 +415,8 @@ body {
     background: #fff;
     border: 2px solid #eeece6;
     z-index: 2;
-    img{
+
+    img {
         width: 100px;
         height: 100px;
     }
@@ -447,24 +448,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h3{
+    padding: 1.6rem;
+
+    h3 {
         max-width: 40rem;
-        width: 90%;
+        width: 100%;
         background: $primarybg;
         text-align: center;
-        border-bottom: 2px solid $secondarybg;
-        margin: 1em 0;
+        box-shadow: inset 0 30px 0 -60px $secondarybg;
+        margin: 0.5rem 0;
     }
 }
 
 .about__subscribe {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    width: 90%;
+    width: 100%;
 
     input {
-        border: none;
+        border: 2px solid transparent;
         border-radius: 5px;
         padding: 0.3rem;
         background: #eeece6;
@@ -516,23 +518,18 @@ body {
     flex-direction: column;
 }
 
-.approach__details {
-    display: flex;
-    flex-direction: column;
-}
 
 .approach__about {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.6rem;
 
     p {
-        margin: 0 0 1rem 0;
+        margin: 0 0 2rem 0;
     }
 }
 
 .approach__banner {
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -546,7 +543,7 @@ body {
     background: $primarybg;
 
     p {
-        padding: 1rem 2rem 0.3rem;
+        padding: 1rem 0 0.5rem 0;
     }
 }
 
@@ -554,12 +551,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1.6rem;
 }
 
 .approach__intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 1rem 0;
 }
 
 .approach__cta {
@@ -611,14 +610,39 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
+            transition: opacity 0.5s;
+
+            &:hover span {
+                opacity: 0.5;
+                transition: opacity 0.5s;
+            }
+
+            &:hover i {
+                opacity: 1;
+                transition: opacity 0.5s;
+            }
 
             i {
-                margin: 0 0 1rem 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                opacity: 0.2;
+                transition: opacity 0.5s;
+                color: $secondarybg;
+                cursor: pointer;
+                transition: opacity 0.5s;
 
             }
 
-            h4 {
-                padding: 0.5rem;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.5s;
             }
         }
     }
@@ -748,7 +772,7 @@ body {
 
 .footer {
     background: $secondarybg;
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 1rem;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -775,7 +799,7 @@ body {
 .footer__resource,
 .footer__logo,
 .footer__copy {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.6rem;
 
     ul {
         display: flex;
@@ -799,7 +823,7 @@ body {
     border: none;
 
     i {
-        margin: 0 1rem 0 0;
+        margin: 0 0.5rem 0 0;
     }
 }
 
