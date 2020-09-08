@@ -259,26 +259,22 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.intro button {
-  grid-column: 2/5;
-  grid-row: 6/7;
-}
 
 .intro__inner {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(6, auto);
 }
 
 .intro__text {
   grid-column: 1/-1;
-  grid-row: 2/6;
+  grid-row: 1/5;
   padding: 1.6rem;
 }
 
 .intro__image {
-  grid-column: 3/-1;
-  grid-row: 5/8;
+  grid-column: 5/8;
+  grid-row: 3/8;
 }
 .intro__image img {
   width: 100%;
@@ -313,9 +309,10 @@ body {
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
-  grid-column: 1/5;
-  grid-row: 1/5;
+  grid-column: 1/4;
+  grid-row: 1/4;
   margin: 0 0 0 1.6rem;
+  align-self: center;
 }
 
 .about__quote {
@@ -323,7 +320,7 @@ body {
   font-size: 0.7em;
   background-color: transparent;
   grid-column: 1/-1;
-  grid-row: 5/6;
+  grid-row: 4/5;
   margin: 0.5rem 0 0 2rem;
 }
 
@@ -556,7 +553,7 @@ body {
 }
 .approach__upcoming ul li {
   font-size: 0.8rem;
-  margin: 0.3rem;
+  margin: 0.4rem;
   text-align: center;
   width: 8rem;
   height: 8rem;
@@ -571,7 +568,7 @@ body {
   transition: opacity 0.5s;
 }
 .approach__upcoming ul li:hover span {
-  opacity: 0.5;
+  opacity: 0.3;
   transition: opacity 0.5s;
 }
 .approach__upcoming ul li:hover i {
@@ -620,11 +617,11 @@ body {
   align-items: center;
 }
 .netscience__text h4 {
-  padding: 1.5rem 2rem 0;
+  padding: 1.5rem 1.6rem 0;
   font-size: 0.9rem;
 }
 .netscience__text p {
-  padding: 1.5rem 2rem 0;
+  padding: 1.5rem 1.6rem 0;
 }
 
 .netscience__apps {
@@ -779,33 +776,153 @@ body {
 
 /*--------MEDIA QUERIES--------*/
 /*Medium screen-----------------------------*/
-/*large screen-----------------------------*/
-/*xlarge screen-----------------------------*/
-@media screen and (min-width: 64rem) {
-  * {
-    font-size: 16px;
+@media screen and (min-width: 35rem) {
+  /*--------INTRO-----------------*/
+  .intro__text {
+    padding: 4rem;
   }
 
-  .subheaders {
-    font-weight: 400;
-    margin: 3em 0 0 0;
-    position: relative;
-    font-size: 2em;
+  /*--------ABOUT-----------------*/
+  .about__hero blockquote {
+    font-size: 1.8rem;
+    margin: 0 0 0 4rem;
   }
 
-  .inner {
+  .about__quote {
+    margin: 0.5rem 0 0 4rem;
+    font-size: 0.8rem;
+  }
+
+  .about__hero_role {
+    display: block;
+    grid-column: 1/-1;
+    grid-row: 5/6;
+    margin: 0.5rem 0 0 4rem;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .about__overlay {
+    width: 100%;
+    height: 100%;
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+    margin: 0 2em 0 0;
+  }
+  .about__overlay img {
+    width: 100%;
+  }
+
+  .about__joinus {
+    padding: 4rem;
+  }
+  .about__joinus h3 {
     max-width: 100%;
   }
 
-  .wraparound {
-    max-width: 64rem;
+  .about__text p {
+    padding: 1rem 4rem;
   }
 
+  .about__items {
+    padding: 4rem 0;
+  }
+
+  .about__circle {
+    margin: 0 4rem 1rem;
+  }
+
+  /*--------APPROACH-----------------*/
+  .approach__about {
+    padding: 1.6rem 4rem;
+  }
+
+  .approach__season1 {
+    padding: 1.6rem 4rem;
+  }
+
+  .approach__upcoming ul li {
+    margin: 2rem;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  /*--------NETWORK SCIENCE-----------------*/
+  .netscience__text {
+    justify-content: center;
+    align-items: center;
+  }
+  .netscience__text h4 {
+    padding: 1.5rem 4rem 0;
+    font-size: 0.9rem;
+  }
+  .netscience__text p {
+    padding: 1.5rem 4rem 0;
+  }
+
+  .netscience__apps {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    padding: 1.6rem 4rem;
+  }
+
+  .netscience__circle1 {
+    grid-column: 1/5;
+    grid-row: 2/4;
+  }
+
+  .netscience__circle2 {
+    grid-column: 5/-1;
+    grid-row: 2/4;
+  }
+
+  .netscience__circle3 {
+    grid-column: 1/5;
+    grid-row: 4/6;
+  }
+
+  .netscience__circle4 {
+    grid-column: 5/-1;
+    grid-row: 4/6;
+  }
+
+  .netscience__circle5 {
+    grid-column: 1/5;
+    grid-row: 6/8;
+  }
+
+  .netscience__circle6 {
+    grid-column: 5/-1;
+    grid-row: 6/8;
+  }
+
+  /*--------FOOTER-----------------*/
+  .footer__social,
+.footer__contact,
+.footer__resource,
+.footer__logo,
+.footer__copy {
+    padding: 1.5rem 4rem;
+  }
+  .footer__social ul,
+.footer__contact ul,
+.footer__resource ul,
+.footer__logo ul,
+.footer__copy ul {
+    display: flex;
+  }
+  .footer__social ul li,
+.footer__contact ul li,
+.footer__resource ul li,
+.footer__logo ul li,
+.footer__copy ul li {
+    margin: 0 0.5rem 0 0;
+    text-decoration: underline;
+  }
+}
+/*large screen-----------------------------*/
+@media screen and (min-width: 48rem) {
   /*--------HEADER-----------------*/
-  .header {
-    padding: 1em;
-  }
-
   .header__home_smhide {
     display: none;
   }
@@ -815,10 +932,7 @@ body {
   }
 
   .header__logo {
-    display: flex;
-    justify-content: stretch;
-    position: relative;
-    width: 40%;
+    width: 60%;
   }
 
   .header__navbar {
@@ -843,6 +957,7 @@ body {
 
   .header__menuitem {
     margin: 0 0 0 2em;
+    font-size: 0.9rem;
   }
 
   .header__menuitem_smhide {
@@ -851,300 +966,6 @@ body {
 
   .header__close {
     display: none;
-  }
-
-  /*--------LANDING-----------------*/
-  .main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .landing {
-    align-items: center;
-    margin: 0;
-    position: relative;
-  }
-
-  .landing__inner {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-  }
-
-  .landing__valueprop {
-    margin: 0;
-    font-size: 24px;
-    grid-column: 3/11;
-    grid-row: 4/9;
-    max-width: 80rem;
-  }
-
-  .landing__valueprop_span1 {
-    font-size: 2em;
-    font-weight: 700;
-    margin: 0 0 1em 0;
-  }
-
-  .landing__valueprop_span2 {
-    font-size: 1.6em;
-    font-weight: 700;
-    margin: 0 0 1em 0;
-  }
-
-  .landing__valueprop_span3 {
-    font-size: 3em;
-    font-weight: 700;
-  }
-
-  .landing__cta {
-    grid-column: 1/-1;
-    grid-row: 10/11;
-  }
-
-  /*--------INTRO-----------------*/
-  .intro {
-    padding: 0;
-  }
-
-  .intro__inner {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-  }
-
-  .intro__text {
-    grid-column: 3/11;
-    grid-row: 1/3;
-    padding: 3rem 0 0 0;
-    font-size: 1rem;
-  }
-
-  .intro__image {
-    grid-column: 7/12;
-    grid-row: 1/6;
-    width: 25rem;
-    height: 25rem;
-  }
-  .intro__image img {
-    width: 100%;
-    min-width: 25rem;
-    max-width: 25rem;
-    opacity: 0.8;
-    object-fit: cover;
-  }
-
-  /*--------ABOUT-----------------*/
-  .about__hero {
-    background: #03243C;
-    position: relative;
-    display: grid;
-    padding: 0;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, auto);
-    justify-content: center;
-    margin: 1rem 0 0 0;
-    max-width: 65rem;
-  }
-  .about__hero blockquote {
-    font-size: 2.5em;
-    grid-column: 2/7;
-    grid-row: 1/6;
-    margin: 0;
-    text-align: left;
-    justify-content: flex-end;
-    align-self: flex-start;
-  }
-
-  .about__quote {
-    font-size: 1em;
-    grid-column: 2/5;
-    grid-row: 5/7;
-    margin: 0;
-    align-self: flex-start;
-  }
-
-  .about__hero_role {
-    grid-column: 2/10;
-    grid-row: 5/6;
-  }
-
-  .about__overlay {
-    width: 100%;
-    height: 100%;
-    grid-column: 5/12;
-    grid-row: 1/-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .about__overlay img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .about__text {
-    display: flex;
-    flex-direction: column;
-  }
-  .about__text p {
-    padding: 0 0 1.6rem 0;
-    text-align: left;
-    grid-column: 3/11;
-  }
-
-  .about__us {
-    margin-bottom: 2rem;
-  }
-
-  .about__items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about__circle {
-    margin: 0 0 2rem 0;
-    width: 30rem;
-    height: 150px;
-  }
-  .about__circle p {
-    font-size: 0.75em;
-    font-weight: normal;
-  }
-
-  .about__circle_text {
-    width: 40rem;
-  }
-  .about__circle_text p {
-    text-align: left;
-  }
-
-  .about__subscribe {
-    max-width: 40rem;
-  }
-
-  /*--------APPROACH-----------------*/
-  .approach__about {
-    padding: 2rem 0;
-    align-items: center;
-  }
-
-  .approach__season1 {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-  }
-
-  .approach__banner {
-    width: 100%;
-    display: flex;
-  }
-
-  .approach__intro {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .approach__upcoming ul {
-    margin: 0 0 1em 0;
-    display: flex;
-    width: 70%;
-    justify-content: center;
-  }
-  .approach__upcoming ul li {
-    margin: 1em;
-  }
-  .approach__upcoming h3 {
-    font-size: 1.4rem;
-  }
-
-  /*--------NETWORK SCIENCE-----------------*/
-  .netscience {
-    align-items: center;
-    margin: 0 0 1em 0;
-  }
-
-  .netscience__inner_disc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .netscience__text {
-    display: flex;
-    flex-direction: column;
-  }
-  .netscience__text p {
-    padding: 1em 0;
-  }
-
-  .netscience__apps {
-    grid-template-columns: repeat(12, 1fr);
-    max-width: 65rem;
-  }
-  .netscience__apps h3 {
-    justify-self: center;
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    margin: 2em 0;
-  }
-  .netscience__apps button {
-    grid-column: 1/-1;
-    grid-row: 20/21;
-    justify-self: center;
-  }
-
-  .netscience__circle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 2.5em 0;
-  }
-  .netscience__circle h5 {
-    font-size: 1em;
-  }
-  .netscience__circle span {
-    display: flex;
-    width: 150px;
-    height: 150px;
-    position: relative;
-  }
-  .netscience__circle span img {
-    /*  position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
-    object-fit: cover;
-  }
-
-  .netscience__circle1 {
-    grid-column: 2/5;
-    grid-row: 2/4;
-  }
-
-  .netscience__circle2 {
-    grid-column: 5/9;
-    grid-row: 2/4;
-  }
-
-  .netscience__circle3 {
-    grid-column: 9/12;
-    grid-row: 2/4;
-  }
-
-  .netscience__circle4 {
-    grid-column: 2/5;
-    grid-row: 5/7;
-  }
-
-  .netscience__circle5 {
-    grid-column: 5/9;
-    grid-row: 5/7;
-  }
-
-  .netscience__circle6 {
-    grid-column: 9/12;
-    grid-row: 5/7;
   }
 
   /*--------FOOTER-----------------*/
@@ -1159,7 +980,7 @@ body {
 
   .footer__inner {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 4rem repeat(6, 1fr) 4rem;
     padding: 0;
   }
   .footer__inner a {
@@ -1193,7 +1014,8 @@ body {
   }
 
   .footer__logo {
-    grid-column: 2/5;
+    grid-column: 2/-1;
+    grid-row: 1/2;
   }
   .footer__logo a {
     font-size: 1.5rem;
@@ -1201,20 +1023,259 @@ body {
   }
 
   .footer__contact {
-    grid-column: 5/9;
+    grid-column: 2/5;
+    grid-row: 2/4;
   }
   .footer__contact i {
     margin: 0 1rem 0 0;
   }
 
   .footer__resource {
-    grid-column: 9/11;
+    grid-column: 4/6;
+    grid-row: 2/6;
     border-top: 1px solid transparent;
+    justify-self: center;
   }
 
   .footer__social {
-    grid-column: 11/12;
+    grid-column: 6/8;
+    grid-row: 2/6;
     border-top: 1px solid transparent;
+    justify-self: center;
+  }
+  .footer__social ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__copy {
+    grid-column: 2/8;
+    grid-row: 6/7;
+    margin: 0;
+  }
+}
+/*xlarge screen-----------------------------*/
+@media screen and (min-width: 60rem) {
+  * {
+    font-size: 16px;
+  }
+
+  .subheaders {
+    font-weight: 400;
+    margin: 3em 0 0 0;
+    position: relative;
+    font-size: 2em;
+  }
+
+  .inner {
+    max-width: 100%;
+  }
+
+  /*--------HEADER-----------------*/
+  .header {
+    padding: 1em;
+  }
+
+  /*--------ABOUT-----------------*/
+  .intro__text {
+    padding: 8rem;
+  }
+
+  /*--------ABOUT-----------------*/
+  .about__hero {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }
+  .about__hero blockquote {
+    font-size: 2rem;
+    grid-column: 1/5;
+    grid-row: 1/4;
+    margin: 0 0 0 8rem;
+  }
+
+  .about__quote {
+    margin: 0.5rem 0 0 8rem;
+    font-size: 0.8rem;
+  }
+
+  .about__hero_role {
+    display: block;
+    grid-column: 1/-1;
+    grid-row: 5/6;
+    margin: 0.5rem 0 0 8rem;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .about__overlay {
+    width: 100%;
+    height: 100%;
+    grid-column: 2/12;
+    grid-row: 2/-1;
+    margin: 0 2em 0 0;
+  }
+  .about__overlay img {
+    width: 100%;
+  }
+
+  .about__joinus {
+    padding: 8rem;
+  }
+  .about__joinus h3 {
+    max-width: 100%;
+  }
+
+  .about__text p {
+    padding: 1rem 8rem;
+  }
+
+  .about__items {
+    padding: 8rem 0;
+  }
+
+  .about__circle {
+    margin: 0 8rem 1rem;
+  }
+
+  /*--------APPROACH-----------------*/
+  .approach__about {
+    padding: 1.6rem 8rem;
+  }
+
+  .approach__season1 {
+    padding: 1.6rem 8rem;
+  }
+
+  .approach__upcoming ul li {
+    margin: 2rem;
+    width: 11rem;
+    height: 11rem;
+  }
+
+  /*--------NETWORK SCIENCE-----------------*/
+  .netscience__text {
+    justify-content: center;
+    align-items: center;
+  }
+  .netscience__text h4 {
+    padding: 1.5rem 8rem 0;
+    font-size: 0.9rem;
+  }
+  .netscience__text p {
+    padding: 1.5rem 8rem 0;
+  }
+
+  .netscience__apps {
+    grid-template-columns: 8rem repeat(10, 1fr) 8rem;
+    grid-template-rows: auto;
+    padding: 1.6rem 0;
+  }
+
+  .netscience__circle1 {
+    grid-column: 2/5;
+    grid-row: 2/4;
+  }
+
+  .netscience__circle2 {
+    grid-column: 5/9;
+    grid-row: 2/4;
+    align-self: center;
+  }
+
+  .netscience__circle3 {
+    grid-column: 9/12;
+    grid-row: 2/4;
+  }
+
+  .netscience__circle4 {
+    grid-column: 2/5;
+    grid-row: 4/6;
+  }
+
+  .netscience__circle5 {
+    grid-column: 5/9;
+    grid-row: 4/6;
+  }
+
+  .netscience__circle6 {
+    grid-column: 9/12;
+    grid-row: 4/6;
+  }
+
+  /*--------FOOTER-----------------*/
+  .footer {
+    padding: 2em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    margin: 0;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 8rem repeat(10, 1fr) 8rem;
+    padding: 0;
+  }
+  .footer__inner a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .footer__inner a:visited {
+    color: #fff;
+  }
+
+  .footer__social,
+.footer__contact,
+.footer__resource,
+.footer__logo,
+.footer__copy {
+    padding: 1.5rem 1rem;
+  }
+  .footer__social ul,
+.footer__contact ul,
+.footer__resource ul,
+.footer__logo ul,
+.footer__copy ul {
+    flex-direction: column;
+  }
+  .footer__social ul li,
+.footer__contact ul li,
+.footer__resource ul li,
+.footer__logo ul li,
+.footer__copy ul li {
+    margin: 0 0.5rem 0 0;
+  }
+
+  .footer__logo {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+  .footer__logo a {
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  .footer__contact {
+    grid-column: 2/6;
+    grid-row: 2/4;
+  }
+  .footer__contact i {
+    margin: 0 1rem 0 0;
+  }
+
+  .footer__resource {
+    grid-column: 6/10;
+    grid-row: 2/6;
+    border-top: 1px solid transparent;
+    justify-self: center;
+  }
+
+  .footer__social {
+    grid-column: 10/12;
+    grid-row: 2/6;
+    border-top: 1px solid transparent;
+    justify-self: center;
   }
   .footer__social ul {
     display: flex;
@@ -1223,7 +1284,7 @@ body {
 
   .footer__copy {
     grid-column: 2/12;
-    grid-row: 2/6;
+    grid-row: 6/7;
     margin: 0;
   }
 }

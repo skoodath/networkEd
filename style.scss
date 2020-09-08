@@ -277,27 +277,23 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    button {
-        grid-column: 2 / 5;
-        grid-row: 6 / 7;
-    }
 }
 
 .intro__inner {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(6, auto);
 }
 
 .intro__text {
     grid-column: 1 / -1;
-    grid-row: 2 / 6;
+    grid-row: 1 / 5;
     padding: 1.6rem;
 }
 
 .intro__image {
-    grid-column: 3 / -1;
-    grid-row: 5 / 8;
+    grid-column: 5 / 8;
+    grid-row: 3 / 8;
 
     img {
         width: 100%;
@@ -335,9 +331,10 @@ body {
         color: #fff;
         font-size: 1.5rem;
         font-weight: bold;
-        grid-column: 1 / 5;
-        grid-row: 1 / 5;
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
         margin: 0 0 0 1.6rem;
+        align-self: center;
     }
 }
 
@@ -346,7 +343,7 @@ body {
     font-size: 0.7em;
     background-color: transparent;
     grid-column: 1 / -1;
-    grid-row: 5 / 6;
+    grid-row: 4 / 5;
     margin: 0.5rem 0 0 2rem;
 }
 
@@ -599,7 +596,7 @@ body {
 
         li {
             font-size: 0.8rem;
-            margin: 0.3rem;
+            margin: 0.4rem;
             text-align: center;
             width: 8rem;
             height: 8rem;
@@ -614,7 +611,7 @@ body {
             transition: opacity 0.5s;
 
             &:hover span {
-                opacity: 0.5;
+                opacity: 0.3;
                 transition: opacity 0.5s;
             }
 
@@ -673,12 +670,12 @@ body {
     align-items: center;
 
     h4 {
-        padding: 1.5rem 2rem 0;
+        padding: 1.5rem 1.6rem 0;
         font-size: 0.9rem;
     }
 
     p {
-        padding: 1.5rem 2rem 0;
+        padding: 1.5rem 1.6rem 0;
     }
 }
 
@@ -845,19 +842,19 @@ body {
 
 /*Medium screen-----------------------------*/
 
-@media screen and (min-width: 30.1rem) {
+@media screen and (min-width: 35rem) {
     @import 'medium';
 }
 
 /*large screen-----------------------------*/
 
-@media screen and (min-width: 48.1rem) {
+@media screen and (min-width: 48rem) {
     @import 'large';
 }
 
 /*xlarge screen-----------------------------*/
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 60rem) {
     @import 'xlarge';
 }
 
