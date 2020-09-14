@@ -11,21 +11,19 @@
 <body>
     <header id="titlebar" class="header">
         <a href="networked.in" class="header__logo">
-            <img src="/illustrations/netEdLogo.png" alt="Logo of the organization">
+            <img src="/illustrations/networkEd.svg" alt="Logo of the organization">
         </a>
-        <span class="header__home header__home_smhide">
+        <!-- <span class="header__home header__home_smhide">
             <i class="fas fa-home"></i>
-        </span>
+        </span> -->
         <div class="header__hamburger">
-            <i class="fas fa-chevron-up"></i>
-            <span>Menu</span>
+            <div class="header__line1_show menu__show1"></div>
+            <div class="header__line2_show menu__show2"></div>
+            
         </div>
         <nav class="header__navbar header__navbar_hide">
-            <div class="header__close">
-                <i class="fas fa-chevron-down"></i>
-            </div>
             <ul class="header__menu">
-                <li class="header__menuitem header__menuitem_smhide" data-value="home">Home</li>
+                <li class="header__menuitem" data-value="home">Home</li>
                 <li class="header__menuitem" data-value="about">About</li>
                 <li class="header__menuitem" data-value="fellowship">The Fellowship</li>
                 <li class="header__menuitem" data-value="netscience">What is network Science?</li>
@@ -49,12 +47,12 @@
                         <span class="landing__valueprop_span3">Real World Networks</span>
                     </p>
                 </div>
-                <div class="landing__cta">
+                <!-- <div class="landing__cta">
                     <svg width="47" height="47" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="39.5" cy="39.5" r="35" stroke="#03243C" />
                         <path d="M65.1675 41.4218L25.1497 62.0755L27.272 17.0922L65.1675 41.4218Z" fill="#03243C" />
                     </svg>
-                </div>
+                </div> -->
             </article>
             <div id="particles-js" class="landing__bg"></div>
                 
@@ -93,21 +91,22 @@
             <article class="about__inner_about inner">
                <h3 class="about__us subheaders">About Us</h3>
                 <div class="about__text">
-                    <p class="wraparound">
+                    <p class="about__text_para about__text_para1">
                         We’re a community of passionate researchers, educators and industry mentors with a common interest to introduce networks
                         to kids across different countries. The goal of the community is to create a thriving ecosystem who share best practices
                         on methods and tools to help children master the art of insight generation using networks.
                     </p>
-                    <p class="wraparound">
+                    <p class="about__text_para about__text_para2">
                         <span>Who can join?</span><br>
                         Anyone interested in how to enhance cognitive functions of children using network representations from real world
                         experiences.
 
                     </p>
+                    <span class="about__joinusbtn">Join Us</span>
                 </div> 
             </article>
             
-            <article class="about__items inner">
+            <!-- <article class="about__items inner">
                 <div class="about__circle about__circle1 wraparound">
                     <div class="about__circle_img">
                         <img src="/illustrations/inf7.png" alt="">
@@ -157,7 +156,7 @@
                     
                 </div>
                 
-            </article>
+            </article> -->
             <article class="about__joinus inner">
                 <h3>Join Us</h3>
                 <form id="subscribe" class="about__subscribe">
@@ -364,7 +363,7 @@
         <footer class="footer">
             <div class="footer__inner inner">
                 <div class="footer__logo">
-                    <a href="http://www.networked.in" class="header__logo">
+                    <a href="http://www.networked.in" class="footer__logo_text">
                         networkED.in
                     </a>
                 </div>
@@ -385,10 +384,10 @@
                 <div class="footer__social">            
                     <h5>Follow Us</h5>
                     <ul>
-                        <li><i class="fab fa-twitter-square fa-2x"></i></li>                   
-                        <li><i class="fab fa-facebook-square fa-2x"></i></li>             
-                        <li><i class="fab fa-instagram-square fa-2x"></i></li>              
-                        <li><i class="fab fa-linkedin fa-2x"></i></li>
+                        <li><a href="https://twitter.com/networkED_in" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a></li>                   
+                        <li><a href=""><i class="fab fa-facebook-square fa-2x"></i></a></li>             
+                        <li><a href="https://www.instagram.com/networkedkids/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a></li>              
+                        <li><a href="https://www.linkedin.com/company/networkedkids" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
                         <li><i class="fab fa-vimeo-square fa-2x"></i></li>
                     </ul>
                     

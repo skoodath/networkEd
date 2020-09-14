@@ -1,11 +1,9 @@
 
 const loadActions = () => {
     let copy = document.querySelector('.footer__copy p span');
-    console.log(copy);
     const loadThis = () => {
         let currentYr = new Date();
         copy.innerHTML = new Date().getFullYear();
-        console.log(currentYr);
     }
     document.addEventListener('DOMContentLoaded', loadThis);
 }
@@ -15,25 +13,31 @@ const myMenuClose = document.querySelector('.header__close');
 
 const showmenu = () => {
     const myMenu = document.querySelector('.header__navbar');
+    const burger1 = document.querySelector('.menu__show1');
+    const burger2 = document.querySelector('.menu__show2');
+
     if (myMenu.classList.contains('header__navbar_hide')){
-        myMenu.classList.remove('header__navbar_hide');
-        myMenu.style.transitionDuration = "1s";
+        myMenu.classList.replace('header__navbar_hide', 'header__navbar_show');
+        burger1.classList.replace('header__line1_show', 'header__line1_hide');
+        burger2.classList.replace('header__line2_show', 'header__line2_hide');
+
     } else {
-        myMenu.classList.add('header__navbar_hide');
-        myMenu.style.transitionDuration = "1s";
+        myMenu.classList.replace('header__navbar_show', 'header__navbar_hide');
+        burger1.classList.replace('header__line1_hide', 'header__line1_show');
+        burger2.classList.replace('header__line2_hide', 'header__line2_show');
+
     }
 
 }
 
 hamburger.addEventListener('click', showmenu);
-myMenuClose.addEventListener('click', showmenu);
 
 const scrollTodiv = (e) => {
 
     let datavalue = e.target.getAttribute("data-value");
     console.log(datavalue);
     if(datavalue === "about"){
-        let aboutDiv = document.querySelector('.about');
+        let aboutDiv = document.querySelector('.about__inner_about');
         aboutDiv.scrollIntoView({ block: "start" });
         showmenu();
     } else if (datavalue === "fellowship") {
@@ -53,25 +57,7 @@ const scrollTodiv = (e) => {
         showmenu();
     }
 }
-const navhomeencap = () => {
-    const homebtn = document.querySelector('.header__home');
 
-    const navhome = () => {
-    let homepage = document.querySelector('.landing');
-        let myMenulist = document.querySelector('.header__navbar');
-        homepage.scrollIntoView({ block: "start" });
-        if (!myMenulist.classList.contains('header__navbar_hide')) {
-            myMenulist.classList.add('header__navbar_hide');
-            myMenulist.style.transitionDuration = "1s";
-        } else {
-            return;
-        }
-
-
-    }
-    homebtn.addEventListener('click', navhome);
-}
-navhomeencap();
 
 
 const menuItems = document.querySelectorAll('.header__menuitem');
@@ -79,6 +65,15 @@ const menuItems = document.querySelectorAll('.header__menuitem');
 for (let item of menuItems){
     item.addEventListener('click', scrollTodiv);
 }
+
+const joinus = document.querySelector('.about__joinusbtn');
+
+const goToJoinUs = () => {
+    let joinus = document.querySelector('.about__joinus');
+    joinus.scrollIntoView({block: "start"});
+}
+
+joinus.addEventListener('click', goToJoinUs);
 
 /*----------CALLING FUNCTIONS-----------*/
 
