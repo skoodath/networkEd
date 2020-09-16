@@ -13,6 +13,7 @@
     line-height: 1.6;
     scroll-behavior: smooth;
     font-size: 12px;
+    color: #272727;
 }
 
 body {
@@ -338,6 +339,7 @@ body {
     border-top: 1px solid $primarybg;
     border-bottom: 1px solid $primarybg;
     padding: 2rem 0;
+    font-size: 1.1rem;
 }
 
 .intro__image {
@@ -434,14 +436,14 @@ body {
 .about__us.subheaders {
     width: 80%;
     padding: 0;
-    margin: 3em 0 0 2rem;
+    margin: 0;
     position: relative;
 }
 
 .about__intro_para {
     width: 80%;
     border-bottom: 3px solid $primarybg;
-    margin: 1rem 0 2rem 3rem;
+    margin: 2rem 0 2rem 3rem;
     padding: 0 0 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
@@ -656,39 +658,54 @@ body {
     flex-direction: column;
     align-items: center;
     letter-spacing: 2px;
+    line-height: 2;
     justify-content: center;
+    background: $primarybg;
+    color: #272727;
+    padding: 2rem;
 }
 
 .approach__seasons {
     display: flex;
     flex-direction: column;
-    background: $primarybg;
     height: 100vh;
 
-    p {
-        padding: 1rem 0 0.5rem 0;
-    }
 }
 
 .approach__season1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.6rem;
+    padding: 0;
+    height: 100vh;
 }
 
 .approach__intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1rem 0;
+
+    p {
+        border-bottom: 3px solid $primarybg;
+        margin: 2rem 0 0 3rem;
+        width: 80%;
+        letter-spacing: 2px;
+        line-height: 2;
+        font-size: 1.1rem;
+        padding: 0 0 2rem 0;
+    }
 }
 
-.approach__cta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
+.approach__season1_more {
+    display: block;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 10vh;
 }
 
 .approach__season1cards {
@@ -795,13 +812,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
+    justify-content: center;
 }
 
 .netscience__header.subheaders {
     width: 80%;
     padding: 0;
-    margin: 3em 2em 2rem;
+    margin: 5em 2em 2rem;
     position: relative;
 
     span {
@@ -817,7 +834,7 @@ body {
     padding: 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .netscience__intro_more {
@@ -826,6 +843,8 @@ body {
     text-align: center;
     margin: auto;
     text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .netscience__details {
