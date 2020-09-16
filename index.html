@@ -91,21 +91,31 @@
                 </div>
             </article>
             <article class="about__inner_about inner">
-               <h3 class="about__us subheaders">About Us</h3>
-                <div class="about__text">
-                    <p class="about__text_para about__text_para1">
+                <div class="about__intro">
+                    <h3 class="about__us subheaders">About Us</h3>
+                    <p class="about__intro_para">
                         We’re a community of passionate researchers, educators and mentors with a desire to introduce networks
                         to children. The goal is to create a thriving ecosystem to share best practices
                         on methods and tools to help children master the art of generating insights using networks.
                     </p>
-                    <p class="about__text_para about__text_para2">
+                </div>
+                <div class="about__join">
+                    <p class="about__join_para">
                         <span>Who can join?</span><br>
                         Anyone interested in how to enhance cognitive functions of children using network representations from real world
                         experiences.
 
                     </p>
-                    <span class="about__joinusbtn">Join Us</span>
+                    <form id="subscribe" class="about__subscribe">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="msgbox">Message</label>
+                        <textarea name="msgbox" id="msgbox" cols="30" rows="3"></textarea>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div> 
+                </div>
+                    
             </article>
             
             <!-- <article class="about__items inner">
@@ -159,28 +169,20 @@
                 </div>
                 
             </article> -->
-            <article class="about__joinus inner">
-                <h3>Join Us</h3>
-                <form id="subscribe" class="about__subscribe">
-                    <label for="visitor">Full Name</label>
-                    <input type="text" name="visitor" required>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                    <label for="msgbox">Message</label>
-                    <textarea name="msgbox" id="msgbox" cols="30" rows="5"></textarea>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </article>
+
         </section>
         <section class="approach pagebg">
             <article class="approach__inner_desc inner">
-                <h3 class="approach__header subheaders">The Fellowship</h3>
                     <div class="approach__about">
-                        <p class="approach__about_para approach__about_para1">
+                        <h3 class="approach__header subheaders"><span>The</span><br>Fellowship</h3>
+                        <p class="approach__about_para">
                             Every year, NetworkED hosts a short term fellowship program to orient and equip children to explore
                             networks in the real world through various pathways.
                         </p>
-                        <p class="approach__about_para approach__about_para2">
+                        <span class="approach__about_more">learn more</span>
+                    </div>
+                    <div class="approach__details">
+                        <p class="approach__details_para">
                             The fellowship acts as a launchpad to explore real world complexity. The
                             fellowship is immersive and challenging, as children investigate real world biological, physical and social networks
                             through a range of digital and physical experiences.
@@ -189,6 +191,7 @@
                             into long term research and pedagogy development centered around understanding the science of network thinking in
                             children.
                         </p>
+                        
                     </div>
             </article>
             <article class="approach__season_wrap inner">
