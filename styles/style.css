@@ -310,7 +310,8 @@ body {
   letter-spacing: 2px;
   width: 80%;
   margin: 2rem 0 0 3rem;
-  border-bottom: 3px solid #FFDE70;
+  border-top: 1px solid #FFDE70;
+  border-bottom: 1px solid #FFDE70;
   padding: 2rem 0;
 }
 
@@ -531,8 +532,6 @@ body {
 
 /*--------APPROACH-----------------*/
 .approach {
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
@@ -568,17 +567,24 @@ body {
 }
 
 .approach__about_more {
+  display: block;
   cursor: pointer;
   width: 50%;
   text-align: center;
-  margin: auto;
+  margin: 2rem auto;
   text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: 10vh;
 }
 
-.approach__details {
+.approach__details_show {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+}
+
+.approach__details_hide {
+  display: none;
 }
 
 .approach__details_para {
@@ -737,7 +743,7 @@ body {
   width: 80%;
   border-top: 1px solid #FFDE70;
   border-bottom: 1px solid #FFDE70;
-  margin: 1rem 0 2rem 3rem;
+  margin: 2rem 0 2rem 3rem;
   padding: 2rem 0;
   letter-spacing: 2px;
   line-height: 2;
@@ -755,7 +761,6 @@ body {
 .netscience__details {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .netscience__details_para {

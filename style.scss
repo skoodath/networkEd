@@ -335,7 +335,8 @@ body {
     letter-spacing: 2px;
     width: 80%;
     margin: 2rem 0 0 3rem;
-    border-bottom: 3px solid $primarybg;
+    border-top: 1px solid $primarybg;
+    border-bottom: 1px solid $primarybg;
     padding: 2rem 0;
 }
 
@@ -355,6 +356,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .about__inner_hero {
@@ -363,6 +365,7 @@ body {
     padding: 2rem 0;
     margin: 1rem 0 0 0;
     justify-content: center;
+
 }
 
 .about__hero {
@@ -416,6 +419,7 @@ body {
     flex-direction: column;
     position: relative;
     padding: 4rem 0 0 0;
+
 }
 
 .about__intro {
@@ -423,6 +427,7 @@ body {
     flex-direction: column;
     height: 100vh;
     position: relative;
+
 }
 
 
@@ -448,6 +453,7 @@ body {
     flex-direction: column;
     height: 100vh;
     position: relative;
+
 }
 
 .about__join_para {
@@ -575,8 +581,6 @@ body {
 /*--------APPROACH-----------------*/
 
 .approach {
-    display: flex;
-    flex-direction: column;
     position: relative;
 }
 
@@ -615,18 +619,27 @@ body {
 }
 
 .approach__about_more {
+    display: block;
     cursor: pointer;
     width: 50%;
     text-align: center;
-    margin: auto;
+    margin: 2rem auto;
     text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 10vh;
 }
 
-.approach__details {
+
+.approach__details_show {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
+
+.approach__details_hide {
+    display: none;
+}
+
 
 .approach__details_para {
     width: 80%;
@@ -635,6 +648,7 @@ body {
     padding: 0 0 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
+
 }
 
 .approach__banner {
@@ -799,7 +813,7 @@ body {
     width: 80%;
     border-top: 1px solid $primarybg;
     border-bottom: 1px solid $primarybg;
-    margin: 1rem 0 2rem 3rem;
+    margin: 2rem 0 2rem 3rem;
     padding: 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
@@ -817,7 +831,6 @@ body {
 .netscience__details {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 
 }
 

@@ -66,15 +66,27 @@ for (let item of menuItems){
     item.addEventListener('click', scrollTodiv);
 }
 
-const joinus = document.querySelector('.about__joinusbtn');
 
-const goToJoinUs = () => {
-    let joinus = document.querySelector('.about__joinus');
-    joinus.scrollIntoView({block: "start"});
+/*----------LEARN MORE BUTTONS----------*/
+
+const learnFellowship = () =>{
+    let learnbtn = document.querySelector('.approach__about_more');
+    let fellowShipMore = document.querySelector('.approach__details');
+    const showMoreFellowship = () => {
+        if(fellowShipMore.classList.contains('approach__details_hide')){
+            fellowShipMore.classList.replace('approach__details_hide', 'approach__details_show');
+            fellowShipMore.scrollIntoView({block: "start"});
+        } else if(fellowShipMore.classList.contains('approach__details_show')){
+            fellowShipMore.classList.replace('approach__details_show', 'approach__details_hide');
+        }
+        
+    }
+
+    learnbtn.addEventListener('click', showMoreFellowship);
+
 }
-
-joinus.addEventListener('click', goToJoinUs);
 
 /*----------CALLING FUNCTIONS-----------*/
 
 loadActions();
+learnFellowship();
