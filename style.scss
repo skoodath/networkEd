@@ -331,7 +331,12 @@ body {
 .intro__text {
     grid-column: 1 / -1;
     grid-row: 1 / 5;
-    padding: 1.6rem;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 80%;
+    margin: 2rem 0 0 3rem;
+    border-bottom: 3px solid $primarybg;
+    padding: 2rem 0;
 }
 
 .intro__image {
@@ -424,7 +429,7 @@ body {
 .about__us.subheaders {
     width: 80%;
     padding: 0;
-    margin: 2rem;
+    margin: 3em 0 0 2rem;
     position: relative;
 }
 
@@ -435,6 +440,7 @@ body {
     padding: 0 0 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
+    font-size: 1.1rem;
 }
 
 .about__join {
@@ -451,6 +457,7 @@ body {
     padding: 0 0 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
+    font-size: 1.1em;
 
     span {
         font-size: 2rem;
@@ -600,10 +607,11 @@ body {
 .approach__about_para {
     width: 80%;
     border-bottom: 3px solid $primarybg;
-    margin: 3rem 0 2rem 3rem;
+    margin: 1rem 0 2rem 3rem;
     padding: 0 0 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
+    font-size: 1.1rem;
 }
 
 .approach__about_more {
@@ -623,7 +631,7 @@ body {
 .approach__details_para {
     width: 80%;
     border-bottom: 3px solid $primarybg;
-    margin: 2rem 0 1rem 3rem;
+    margin: 2rem 0 0 3rem;
     padding: 0 0 2rem 0;
     letter-spacing: 2px;
     line-height: 2;
@@ -769,25 +777,58 @@ body {
     flex-direction: column;
 }
 
-.netscience__inner_disc .subheaders {
-    position: absolute;
-    transform: rotate(-90deg);
-}
-
-.netscience__text {
-
-    justify-content: center;
+.netscience__intro {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 
-    h4 {
-        padding: 1.5rem 1.6rem 0;
-        font-size: 0.9rem;
-    }
+}
 
-    p {
-        padding: 1.5rem 1.6rem 0;
-        width: 70%;
+.netscience__header.subheaders {
+    width: 80%;
+    padding: 0;
+    margin: 3em 2em 2rem;
+    position: relative;
+
+    span {
+        font-weight: normal;
     }
+}
+
+.netscience__intro_header {
+    width: 80%;
+    border-top: 1px solid $primarybg;
+    border-bottom: 1px solid $primarybg;
+    margin: 1rem 0 2rem 3rem;
+    padding: 2rem 0;
+    letter-spacing: 2px;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.netscience__intro_more {
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.netscience__details {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.netscience__details_para {
+    width: 80%;
+    border-bottom: 3px solid $primarybg;
+    margin: 1rem 0 2rem 3rem;
+    padding: 0 0 2rem 0;
+    letter-spacing: 2px;
+    line-height: 2;
+    font-size: 1.1rem;
 }
 
 .netscience__apps {
