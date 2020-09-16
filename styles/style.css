@@ -394,6 +394,7 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
+  justify-content: center;
 }
 
 .about__us.subheaders {
@@ -418,6 +419,7 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
+  justify-content: center;
 }
 
 .about__join_para {
@@ -544,6 +546,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
 }
 
 .approach__header.subheaders {
