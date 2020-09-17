@@ -388,7 +388,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 4rem 0 0 0;
+  padding: 0;
 }
 
 .about__intro {
@@ -629,16 +629,32 @@ body {
 
 .approach__intro {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.approach__intro::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid #FFDE70;
 }
 .approach__intro p {
-  border-bottom: 3px solid #FFDE70;
-  margin: 2rem 0 0 3rem;
   width: 80%;
   letter-spacing: 2px;
   line-height: 2;
   font-size: 1.1rem;
+  padding: 0;
+}
+.approach__intro p:nth-child(1) {
+  margin: 2rem 0;
+}
+.approach__intro p:nth-child(2) {
   padding: 0 0 2rem 0;
 }
 
@@ -740,6 +756,7 @@ body {
 .netscience__inner_disc {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .netscience__intro {
@@ -783,12 +800,23 @@ body {
 .netscience__details {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.netscience__details::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid #FFDE70;
 }
 
 .netscience__details_para {
   width: 80%;
-  border-bottom: 3px solid #FFDE70;
-  margin: 1rem 0 2rem 3rem;
+  margin: 0;
+  align-self: center;
   padding: 0 0 2rem 0;
   letter-spacing: 2px;
   line-height: 2;
@@ -833,7 +861,7 @@ body {
 }
 .netscience__circle p {
   word-wrap: break-word;
-  padding: 0 2rem;
+  padding: 0 6rem;
   justify-self: center;
   text-align: center;
   font-size: 0.8rem;
@@ -876,7 +904,6 @@ body {
   margin: 2rem 0 1rem;
   display: flex;
   flex-direction: column;
-  color: #fff;
 }
 
 .footer__inner {
@@ -899,6 +926,13 @@ body {
 .footer__copy {
   padding: 1.5rem 1.6rem;
 }
+.footer__social h5,
+.footer__contact h5,
+.footer__resource h5,
+.footer__logo h5,
+.footer__copy h5 {
+  color: #ffffff;
+}
 .footer__social ul,
 .footer__contact ul,
 .footer__resource ul,
@@ -913,18 +947,25 @@ body {
 .footer__copy ul li {
   margin: 0 0.5rem 0 0;
   text-decoration: underline;
+  color: #ffffff;
 }
 
 .footer__logo a {
   font-size: 1.5rem;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .footer__contact {
   border: none;
+  color: #ffffff;
+}
+.footer__contact span {
+  color: #ffffff;
 }
 .footer__contact i {
   margin: 0 0.5rem 0 0;
+  color: #ffffff;
 }
 
 .footer__resource {
@@ -934,10 +975,19 @@ body {
 .footer__social {
   border-top: 1px solid #4e4e4e;
 }
+.footer__social i {
+  color: #ffffff;
+}
 
 .footer__copy {
   border-top: 1px solid #4e4e4e;
   margin: 0 0 2rem 0;
+}
+.footer__copy p {
+  color: #ffffff;
+}
+.footer__copy p span {
+  color: #ffffff;
 }
 
 /*--------MEDIA QUERIES--------*/
