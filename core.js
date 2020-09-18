@@ -29,13 +29,21 @@ const showmenu = () => {
     }
 
 }
+window.addEventListener("scroll", () => {
+    let headerscroll = document.querySelector('.header');
+    if (window.pageYOffset > 650) {
+        headerscroll.classList.add('header_boxshadow');
+    } else {
+        headerscroll.classList.remove('header_boxshadow');
+    }
+})
 
 hamburger.addEventListener('click', showmenu);
 
 const scrollTodiv = (e) => {
 
     let datavalue = e.target.getAttribute("data-value");
-    console.log(datavalue);
+
     if(datavalue === "about"){
         let aboutDiv = document.querySelector('.about__inner_about');
         aboutDiv.scrollIntoView({ block: "start" });
