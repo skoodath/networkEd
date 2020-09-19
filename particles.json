@@ -50,7 +50,7 @@
       "distance": 200,
       "color": "#977e2b",
       "opacity": 0.3,
-      "width": 0.1
+      "width": 0.5
     },
     "move": {
       "enable": true,

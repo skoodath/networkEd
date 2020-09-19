@@ -58,10 +58,6 @@ body {
 
 /*--------HEADER-----------------*/
 .header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   padding: 0;
   background: #fff;
@@ -136,15 +132,27 @@ body {
 }
 
 .header__logo {
-  position: relative;
+  position: absolute;
   display: block;
   margin: 0 auto;
   background: #fff;
+  justify-self: center;
+  width: 10rem;
+  height: 10rem;
+  z-index: 99;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  border-radius: 50%;
 }
 .header__logo img {
   display: block;
   width: 7rem;
   max-width: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header__navbar {
@@ -160,7 +168,7 @@ body {
   transition-duration: 0.8s;
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   margin: 0;
-  z-index: 1;
+  z-index: 999;
   display: flex;
   flex-direction: column;
 }
@@ -348,12 +356,14 @@ body {
 }
 .about__hero blockquote {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   grid-column: 1/-1;
   grid-row: 1/4;
-  margin: 0 0 0 1.6rem;
+  margin: 0;
   align-self: center;
+  width: 80%;
+  justify-self: center;
 }
 
 .about__quote {
@@ -372,8 +382,8 @@ body {
 .about__overlay {
   width: 100%;
   height: 100%;
-  grid-column: 1/-1;
-  grid-row: 4/-1;
+  grid-column: 1/6;
+  grid-row: 3/-1;
 }
 .about__overlay img {
   width: 100%;
@@ -609,10 +619,25 @@ body {
   padding: 2rem;
 }
 
+.approach__bannerimg {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.approach__bannerimg img {
+  width: 150px;
+}
+.approach__bannerimg h3 {
+  font-size: 1.3rem;
+  padding: 0 0 2rem 0;
+  border-bottom: 3px solid #FFDE70;
+}
+
 .approach__seasons {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .approach__season1 {
@@ -620,17 +645,16 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0;
-  height: 100vh;
 }
 
-.approach__intro {
+.approach__season1intro {
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.approach__intro::after {
+.approach__season1intro::after {
   position: absolute;
   content: "";
   width: 80%;
@@ -640,17 +664,18 @@ body {
   transform: translateX(-50%);
   border-bottom: 3px solid #FFDE70;
 }
-.approach__intro p {
+
+.approach__season1para {
   width: 80%;
   letter-spacing: 2px;
   line-height: 2;
   font-size: 1.1rem;
   padding: 0;
 }
-.approach__intro p:nth-child(1) {
+.approach__season1para:nth-child(1) {
   margin: 2rem 0;
 }
-.approach__intro p:nth-child(2) {
+.approach__season1para:nth-child(2) {
   padding: 0 0 2rem 0;
 }
 
@@ -667,18 +692,43 @@ body {
 }
 
 .approach__season1cards {
-  width: 80%;
   display: flex;
+  padding: 0 0 0 5px;
+  height: 100vh;
+  position: relative;
 }
 
 .approach__scard {
-  display: none;
-  width: 200px;
-  min-width: 200px;
-  height: 300px;
-  background: #e0e0e0;
-  box-shadow: 0 0 15px 8px #eeeeee inset, 0 0 15px #cacaca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw / 3.2);
+  height: 150px;
+  background: #FFDE70;
   border-radius: 0.6rem;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 14px #eeece6 inset;
+  transition: width 0.5s, height 0.5s;
+}
+.approach__scard p {
+  display: none;
+}
+
+.approach__cardnumber {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 10%;
+  top: 5%;
+  transform: translate(-10%, -10%);
+  background: #03243C;
+  color: #fff;
 }
 
 .approach__upcoming {
@@ -820,15 +870,36 @@ body {
 }
 
 .netscience__apps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
 }
-.netscience__apps h3 {
-  justify-self: center;
-  grid-column: 1/-1;
-  grid-row: 1/2;
-  margin: 2rem 0 1rem 0;
+
+.netscience__appheader {
+  width: 80%;
+  border-top: 1px solid #FFDE70;
+  border-bottom: 1px solid #FFDE70;
+  margin: 2rem 0 2rem 3rem;
+  padding: 2rem 0;
+  letter-spacing: 2px;
+  line-height: 2;
+  font-size: 1.6rem;
+}
+
+.netscience__applist {
+  width: 80%;
+  margin: 0;
+  align-self: center;
+  padding: 0 0 2rem 0;
+  letter-spacing: 2px;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+.netscience__applist dt {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.netscience__applist dd {
+  margin: 0 0 2rem 0;
 }
 
 .netscience__circle {
@@ -862,36 +933,6 @@ body {
   text-align: center;
   font-size: 0.8rem;
   height: 5rem;
-}
-
-.netscience__circle1 {
-  grid-column: 1/-1;
-  grid-row: 2/4;
-}
-
-.netscience__circle2 {
-  grid-column: 1/-1;
-  grid-row: 5/7;
-}
-
-.netscience__circle3 {
-  grid-column: 1/-1;
-  grid-row: 8/10;
-}
-
-.netscience__circle4 {
-  grid-column: 1/-1;
-  grid-row: 11/13;
-}
-
-.netscience__circle5 {
-  grid-column: 1/-1;
-  grid-row: 14/16;
-}
-
-.netscience__circle6 {
-  grid-column: 1/-1;
-  grid-row: 17/19;
 }
 
 /*--------FOOTER-----------------*/
